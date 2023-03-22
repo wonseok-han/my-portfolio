@@ -2,34 +2,35 @@ import classnames from 'classnames';
 import { FiMoon, FiSun } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
+import { useTheme } from 'contexts/ThemeContext';
+
 interface HeaderProps {
-  isDarkMode: boolean;
   toggleDarkMode: () => void;
 }
 
-export default function Header({ isDarkMode, toggleDarkMode }: HeaderProps) {
+export default function Header({ toggleDarkMode }: HeaderProps) {
+  const { isDarkMode } = useTheme();
+  const bgColor = isDarkMode ? 'bg-gray-800' : 'bg-white';
+  const textColor = isDarkMode ? 'text-white' : 'text-gray-800';
+
   return (
-    <header className="fixed inset-x-0 top-0 h-16 bg-white shadow-md">
+    <header
+      className={`fixed inset-x-0 top-0 h-16 shadow-md ${bgColor} ${textColor}`}
+    >
       <nav className="flex h-full items-center justify-between px-4">
-        <Link to="/" className="text-lg font-semibold text-gray-800">
-          wonseok-han&apos;s Site
+        <Link to="/" className="text-lg font-semibold hover:text-blue-400">
+          <h1 className="text-3xl">wonseok-han&apos;s page</h1>
         </Link>
         <div className="flex items-center space-x-4">
-          <Link
-            to="/"
-            className="text-gray-500 hover:text-black hover:underline"
-          >
+          <Link to="/" className=" hover:text-blue-400 hover:underline">
             Home
           </Link>
-          <Link
-            to="/career"
-            className="text-gray-500 hover:text-black hover:underline"
-          >
+          <Link to="/career" className=" hover:text-blue-400 hover:underline">
             Career
           </Link>
           <Link
             to="/portfolio"
-            className="text-gray-500 hover:text-black hover:underline"
+            className=" hover:text-blue-400 hover:underline"
           >
             Portfolio
           </Link>

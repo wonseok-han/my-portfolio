@@ -30,7 +30,7 @@ const App: React.FC = () => {
             isDarkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'
           }`}
         >
-          <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+          <Header toggleDarkMode={toggleDarkMode} />
           <Content>
             <MyRoutes />
           </Content>
