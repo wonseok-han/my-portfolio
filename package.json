@@ -35,6 +35,12 @@
     "eject": "react-scripts eject",
     "prepare": "husky install"
   },
+  "lint-staged": {
+    "./src/**/*.{js,jsx,ts,tsx}": [
+      "eslint ./src --fix",
+      "prettier -w ./src/**/*.(js|jsx|ts|tsx)"
+    ]
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
