@@ -20,7 +20,16 @@ const App: React.FC = () => {
 
   useEffect(() => {
     AOS.init();
-  });
+  }, []);
+
+  useEffect(() => {
+    document.body.style.backgroundColor = isDarkMode
+      ? 'rgb(17 24 39)'
+      : 'rgb(255 255 255)';
+    document.body.style.color = isDarkMode
+      ? 'rgb(17 24 39)'
+      : 'rgb(255 255 255)';
+  }, [isDarkMode]);
 
   return (
     <Router basename={process.env.PUBLIC_URL}>

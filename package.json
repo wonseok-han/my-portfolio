@@ -35,7 +35,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prepare": "husky install",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "predeploy": "yarn build"
   },
   "lint-staged": {
     "./src/**/*.{js,jsx,ts,tsx}": [

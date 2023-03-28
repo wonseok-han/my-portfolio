@@ -7,11 +7,27 @@ export interface CareerItem {
   company: string;
 }
 
-export const historyData: Array<CareerItem> = [
+export const careerData: Array<CareerItem> = [
+  {
+    key: '14',
+    name: '영남이공대 원스탑시스템 고도화',
+    term: '2023. 02. ~ 2023. 04',
+    role: '카카오톡 알림, 위원회 관리, 휴가/출장현황 개발',
+    skills: 'NexacroN, eGovFramework, Oracle',
+    company: '(주)도울정보기술',
+  },
+  {
+    key: '13',
+    name: '대우조선해양 정부과제관리시스템',
+    term: '2022. 11. ~ 2023.01',
+    role: '정부과제관리 화면 분석/설계/개발',
+    skills: 'Nexacro17, eGovFramework, Oracle',
+    company: '(주)도울정보기술',
+  },
   {
     key: '12',
     name: 'CLT 터미널운영시스템',
-    term: '2022. 04. ~ ',
+    term: '2022. 04. ~ 2022. 10.',
     role: '컨테이너운영 화면 개발',
     skills: 'React, SpringBoot, Flex, Spring, Oracle',
     company: '(주)도울정보기술',
