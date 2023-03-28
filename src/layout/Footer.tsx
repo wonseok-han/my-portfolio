@@ -1,3 +1,5 @@
+import { FaGithub } from 'react-icons/fa';
+
 import { useTheme } from 'contexts/ThemeContext';
 
 export default function Footer() {
@@ -7,9 +9,16 @@ export default function Footer() {
 
   return (
     <footer
-      className={`fixed inset-x-0 bottom-0 h-14 ${bgColor} ${textColor} flex items-center justify-center`}
+      className={`fixed inset-x-0 bottom-0 h-12 ${bgColor} ${textColor} flex items-center justify-center gap-5 shadow-inner`}
     >
       <p>© 2023 wonseok-han&apos;s Page</p>
+      <a
+        href={`https://github.com/wonseok-han`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaGithub size={25} />
+      </a>
     </footer>
   );
 }

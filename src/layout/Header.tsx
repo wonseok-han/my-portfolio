@@ -15,7 +15,7 @@ export default function Header({ toggleDarkMode }: HeaderProps) {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 h-16 shadow-md ${bgColor} ${textColor}`}
+      className={`fixed inset-x-0 top-0 h-16 shadow-md ${bgColor} ${textColor} z-50`}
     >
       <nav className="flex h-full items-center justify-between px-4">
         <Link to="/" className="text-lg font-semibold hover:text-blue-400">

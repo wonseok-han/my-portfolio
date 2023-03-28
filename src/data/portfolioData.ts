@@ -3,8 +3,8 @@ export interface PortfolioItem {
   name: string;
   skills: string;
   url: string;
-  image: string;
-  active: boolean;
+  image?: string;
+  github?: string;
 }
 
 export const portfolioData: Array<PortfolioItem> = [
@@ -14,8 +14,8 @@ export const portfolioData: Array<PortfolioItem> = [
     skills:
       'Typescript, React, styled-components, Framer-Motion, Recoil, react-query',
     url: 'https://wonseok-han.github.io/clone-netflix',
-    image: '../assets/portfolio/clone-netflix.png',
-    active: false,
+    image: 'assets/portfolio/clone-netflix.png',
+    github: 'https://github.com/wonseok-han/clone-netflix',
   },
   {
     key: '2',
@@ -24,15 +24,21 @@ export const portfolioData: Array<PortfolioItem> = [
       'Typescript, React, styled-components, Framer-Motion, Recoil, react-query',
     url: 'https://wonseok-han.github.io/clone-netflix',
     image: 'https://dummyimage.com/1024x400/999/000',
-    active: false,
   },
   {
     key: '3',
+    name: 'test2',
+    skills:
+      'Typescript, React, styled-components, Framer-Motion, Recoil, react-query',
+    url: 'https://wonseok-han.github.io/clone-netflix',
+    image: 'https://dummyimage.com/1024x400/999/fff',
+  },
+  {
+    key: '4',
     name: 'test3',
     skills:
       'Typescript, React, styled-components, Framer-Motion, Recoil, react-query',
     url: 'https://wonseok-han.github.io/clone-netflix',
     image: 'https://dummyimage.com/1024x400/999/fff',
-    active: false,
   },
 ];

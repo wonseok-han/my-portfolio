@@ -12,7 +12,7 @@ import MyRoutes from 'Routes';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 
 const App: React.FC = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
@@ -22,20 +22,11 @@ const App: React.FC = () => {
     AOS.init();
   }, []);
 
-  useEffect(() => {
-    document.body.style.backgroundColor = isDarkMode
-      ? 'rgb(17 24 39)'
-      : 'rgb(255 255 255)';
-    document.body.style.color = isDarkMode
-      ? 'rgb(17 24 39)'
-      : 'rgb(255 255 255)';
-  }, [isDarkMode]);
-
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <ThemeContext.Provider value={{ isDarkMode, toggleDarkMode }}>
         <div
-          className={`flex flex-col ${
+          className={`flex min-h-full flex-col ${
             isDarkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'
           }`}
         >
