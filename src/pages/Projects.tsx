@@ -24,7 +24,7 @@ const Projects = () => {
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="w-full rounded-t-md object-cover"
+                  className="w-full rounded-t-md object-fill"
                   style={{ height: 300 }}
                 />
               </div>

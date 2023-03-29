@@ -10,20 +10,20 @@ export interface ProjectItem {
 export const projectData: Array<ProjectItem> = [
   {
     key: '1',
+    name: 'Portfolio',
+    skills: 'Typescript, React, Tailwind',
+    url: 'https://wonseok-han.github.io/my-portfolio',
+    image: 'assets/projects/my-portfolio.png',
+    github: 'https://github.com/wonseok-han/my-portfolio',
+  },
+  {
+    key: '2',
     name: 'Netflix Clone Cording',
     skills:
       'Typescript, React, styled-components, Framer-Motion, Recoil, react-query',
     url: 'https://wonseok-han.github.io/clone-netflix',
     image: 'assets/projects/clone-netflix.png',
     github: 'https://github.com/wonseok-han/clone-netflix',
-  },
-  {
-    key: '2',
-    name: 'test1',
-    skills:
-      'Typescript, React, styled-components, Framer-Motion, Recoil, react-query',
-    url: 'https://wonseok-han.github.io/clone-netflix',
-    image: 'https://dummyimage.com/1024x400/999/000',
   },
   {
     key: '3',
