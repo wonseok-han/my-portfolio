@@ -3,11 +3,6 @@ import { FaGithub } from 'react-icons/fa';
 import { projectData, ProjectItem } from 'data/portfolioData';
 
 const Projects = () => {
-  const portfolioItems = projectData.map((item, index) => ({
-    ...item,
-    active: index === 0,
-  }));
-
   return (
     <div className="h-full bg-gray-100">
       <div className="mx-auto max-w-full py-16 px-4 sm:px-6 lg:px-8">
@@ -20,7 +15,7 @@ const Projects = () => {
           data-aos="fade-up"
           data-aos-duration="1500"
         >
-          {portfolioItems.map((item: ProjectItem) => (
+          {projectData.map((item: ProjectItem) => (
             <div
               key={item.key}
               className={`rounded-md bg-gray-800 opacity-70 shadow-2xl transition-all hover:scale-105 hover:opacity-100`}

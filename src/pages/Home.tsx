@@ -5,7 +5,7 @@ import {
   skillDataKeyName,
 } from 'data/userData';
 
-export default function Home() {
+const Home = () => {
   return (
     <div className="h-full bg-gray-100">
       <div
@@ -54,14 +54,18 @@ export default function Home() {
                       {skillDataKeyName[key]}
                     </div>
                     <hr className="mt-2 mb-4" />
-                    {skillData[key].map((skill: string, index) => (
-                      <div
-                        key={`${skill}-${index}`}
-                        className="pt-2 text-gray-900"
-                      >
-                        {skill}
-                      </div>
-                    ))}
+                    <div className="grid grid-cols-2">
+                      {skillData[key].map((skill: string, index) => (
+                        <div key={`${skill}-${index}`} className="relative">
+                          <img
+                            src={`${process.env.PUBLIC_URL}/${skill}`}
+                            alt={`${skill}-${index}`}
+                            className="w-full rounded-t-md object-scale-down"
+                            style={{ height: 150 }}
+                          />
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               ))}
@@ -71,4 +75,6 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
+
+export default Home;
