@@ -1,4 +1,4 @@
-export interface PortfolioItem {
+export interface ProjectItem {
   key: string;
   name: string;
   skills: string;
@@ -7,14 +7,14 @@ export interface PortfolioItem {
   github?: string;
 }
 
-export const portfolioData: Array<PortfolioItem> = [
+export const projectData: Array<ProjectItem> = [
   {
     key: '1',
     name: 'Netflix Clone Cording',
     skills:
       'Typescript, React, styled-components, Framer-Motion, Recoil, react-query',
     url: 'https://wonseok-han.github.io/clone-netflix',
-    image: 'assets/portfolio/clone-netflix.png',
+    image: 'assets/projects/clone-netflix.png',
     github: 'https://github.com/wonseok-han/clone-netflix',
   },
   {

@@ -1,9 +1,9 @@
 import { FaGithub } from 'react-icons/fa';
 
-import { portfolioData, PortfolioItem } from 'data/portfolioData';
+import { projectData, ProjectItem } from 'data/portfolioData';
 
-const Portfolio = () => {
-  const portfolioItems = portfolioData.map((item, index) => ({
+const Projects = () => {
+  const portfolioItems = projectData.map((item, index) => ({
     ...item,
     active: index === 0,
   }));
@@ -20,7 +20,7 @@ const Portfolio = () => {
           data-aos="fade-up"
           data-aos-duration="1500"
         >
-          {portfolioItems.map((item: PortfolioItem) => (
+          {portfolioItems.map((item: ProjectItem) => (
             <div
               key={item.key}
               className={`rounded-md bg-gray-800 opacity-70 shadow-2xl transition-all hover:scale-105 hover:opacity-100`}
@@ -63,4 +63,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Projects;

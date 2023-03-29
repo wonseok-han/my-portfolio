@@ -1,86 +1,72 @@
-import { useState } from 'react';
-import { CSSTransition } from 'react-transition-group';
-
-import { portfolioData, PortfolioItem } from 'data/portfolioData';
-
-interface PortfolioItemExtend extends PortfolioItem {
-  active: boolean;
-}
+import {
+  userData,
+  userDataKeyName,
+  skillData,
+  skillDataKeyName,
+} from 'data/userData';
 
 export default function Home() {
-  const [, setActiveIndex] = useState(0);
-  const portfolioItems = portfolioData.map((item, index) => ({
-    ...item,
-    active: index === 0,
-  }));
-
-  const handleNext = () => {
-    setActiveIndex((prevIndex) =>
-      prevIndex === portfolioData.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  const handlePrev = () => {
-    setActiveIndex((prevIndex) =>
-      prevIndex === 0 ? portfolioData.length - 1 : prevIndex - 1
-    );
-  };
-
   return (
     <div className="h-full bg-gray-100">
-      <div className="mx-auto max-w-full py-16 px-4 sm:px-6 lg:px-8">
-        <div className="font-sans text-5xl font-black text-gray-900">
-          Welcome!!
+      <div
+        className="mx-auto max-w-full py-16 px-4 sm:px-6 lg:px-8"
+        data-aos="fade-up"
+        data-aos-duration="1500"
+      >
+        <div className="font-sans text-4xl font-extrabold text-gray-900">
+          About Me
         </div>
         <hr className="mt-2 h-1 bg-gray-700" />
-        <div className="relative mt-4 flex h-80 flex-col flex-wrap space-y-4">
-          {portfolioItems.map((item: PortfolioItemExtend) => (
-            <CSSTransition
-              key={item.key}
-              classNames="fade"
-              timeout={{ enter: 500, exit: 300 }}
-            >
-              <div
-                key={item.key}
-                className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-                  item.active ? 'opacity-100' : 'opacity-0'
-                }`}
-              >
-                <img
-                  src={`${process.env.PUBLIC_URL}/${item.image}`}
-                  alt={item.name}
-                  className="h-full w-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gray-900 opacity-50"></div>
-                <div className="absolute inset-x-0 bottom-0 p-4 ">
-                  <h3 className="text-xl font-bold text-white">{item.name}</h3>
-                  <p className="mt-2 text-gray-300">{item.skills}</p>
-                  <div className="text-center">
-                    <a
-                      href={item.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-4 inline-block rounded bg-gray-800 px-4 py-2 font-bold text-white hover:bg-gray-700"
-                    >
-                      View project
-                    </a>
+        <div className="mt-4 space-y-4">
+          {userData && (
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {Object.keys(userData).map((key: string) => (
+                <div
+                  key={key}
+                  className="overflow-hidden rounded-lg bg-white shadow-lg transition-all hover:scale-105"
+                >
+                  <div className="px-6 py-4 text-center ">
+                    <div className="font-sans text-lg font-extrabold text-gray-900">
+                      {userDataKeyName[key]}
+                    </div>
+                    <hr className="mt-2 mb-4" />
+                    <div className="text-gray-900">{userData[key]}</div>
                   </div>
                 </div>
-              </div>
-            </CSSTransition>
-          ))}
-          <button
-            className="absolute top-1/2 left-0 ml-4 -translate-y-1/2 focus:outline-none"
-            onClick={handlePrev}
-          >
-            &lt;
-          </button>
-          <button
-            className="absolute top-1/2 right-0 mr-4 -translate-y-1/2 focus:outline-none"
-            onClick={handleNext}
-          >
-            &gt;
-          </button>
+              ))}
+            </div>
+          )}
+        </div>
+        <div className="mt-10 font-sans text-4xl font-extrabold text-gray-900">
+          Skills
+        </div>
+        <hr className="mt-2 h-1 bg-gray-700" />
+        <div className="mt-4 space-y-4">
+          {skillData && (
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {Object.keys(skillData).map((key: string) => (
+                <div
+                  key={key}
+                  className="overflow-hidden rounded-lg bg-white shadow-lg transition-all hover:scale-105"
+                >
+                  <div className="px-6 py-4 text-center">
+                    <div className="font-sans text-lg font-extrabold text-gray-900">
+                      {skillDataKeyName[key]}
+                    </div>
+                    <hr className="mt-2 mb-4" />
+                    {skillData[key].map((skill: string, index) => (
+                      <div
+                        key={`${skill}-${index}`}
+                        className="pt-2 text-gray-900"
+                      >
+                        {skill}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>
