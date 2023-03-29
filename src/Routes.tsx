@@ -2,7 +2,7 @@ import { Routes as GetRoutes, Route, useLocation } from 'react-router-dom';
 
 import Career from 'pages/Career';
 import Home from 'pages/Home';
-import Portfolio from 'pages/Portfolio';
+import Portfolio from 'pages/Projects';
 
 const Routes: React.FC = () => {
   const location = useLocation();

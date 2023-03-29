@@ -4,8 +4,10 @@ export default function Career() {
   return (
     <div className="h-full bg-gray-100">
       <div className="mx-auto max-w-full py-16 px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-semibold text-gray-900">Career</h1>
-        <hr className="h-1 bg-gray-700" />
+        <div className="font-sans text-5xl font-black text-gray-900">
+          Career
+        </div>
+        <hr className="mt-2 h-1 bg-gray-700" />
         <ul className="mt-4 space-y-4">
           {careerData.map((item: CareerItem) => (
             <li

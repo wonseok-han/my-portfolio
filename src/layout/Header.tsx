@@ -18,21 +18,27 @@ export default function Header({ toggleDarkMode }: HeaderProps) {
       className={`fixed inset-x-0 top-0 h-16 shadow-md ${bgColor} ${textColor} z-50`}
     >
       <nav className="flex h-full items-center justify-between px-4">
-        <Link to="/" className="text-lg font-semibold hover:text-blue-400">
-          <h1 className="text-3xl">wonseok-han&apos;s</h1>
+        <Link to="/" className="text-lg font-extrabold hover:text-blue-400">
+          <h1 className="text-3xl">wonseok-han</h1>
         </Link>
         <div className="flex items-center space-x-4">
-          <Link to="/" className=" hover:text-blue-400 hover:underline">
+          <Link
+            to="/"
+            className="font-extrabold hover:text-blue-400 hover:underline"
+          >
             Home
           </Link>
-          <Link to="/career" className=" hover:text-blue-400 hover:underline">
+          <Link
+            to="/career"
+            className="font-extrabold hover:text-blue-400 hover:underline"
+          >
             Career
           </Link>
           <Link
             to="/portfolio"
-            className=" hover:text-blue-400 hover:underline"
+            className="font-extrabold hover:text-blue-400 hover:underline"
           >
-            Portfolio
+            Projects
           </Link>
           <button
             className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-gray-400 focus:border-blue-500 focus:outline-none"

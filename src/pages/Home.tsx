@@ -29,8 +29,10 @@ export default function Home() {
   return (
     <div className="h-full bg-gray-100">
       <div className="mx-auto max-w-full py-16 px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-semibold text-gray-900">Welcome!!</h1>
-        <hr className="h-1 bg-gray-700" />
+        <div className="font-sans text-5xl font-black text-gray-900">
+          Welcome!!
+        </div>
+        <hr className="mt-2 h-1 bg-gray-700" />
         <div className="relative mt-4 flex h-80 flex-col flex-wrap space-y-4">
           {portfolioItems.map((item: PortfolioItemExtend) => (
             <CSSTransition
