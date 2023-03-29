@@ -14,24 +14,25 @@ const Portfolio = () => {
         <h1 className="text-4xl font-semibold text-gray-900">Portfolio</h1>
         <hr className="h-1 bg-gray-700" />
         <div
-          className="mx-auto mt-4 grid grid-flow-row gap-2 sm:grid-cols-1 lg:grid-cols-2"
+          className="mx-auto mt-4 grid grid-flow-row gap-4 sm:grid-cols-1 lg:grid-cols-2"
           data-aos="fade-up"
+          data-aos-duration="1500"
         >
           {portfolioItems.map((item: PortfolioItem) => (
             <div
               key={item.key}
-              className={`grid grid-flow-col grid-rows-2 bg-gray-800 opacity-80 shadow-md hover:opacity-100`}
-              style={{ gridTemplateRows: '1.5fr 0.5fr' }}
+              className={`rounded-md bg-gray-800 opacity-70 shadow-2xl transition-all hover:scale-105 hover:opacity-100`}
             >
-              <img
-                src={item.image}
-                alt={item.name}
-                className="h-full object-contain"
-              />
-              <div className="m-3 inline-block">
-                <h2 className={`text-center text-2xl font-bold text-white`}>
-                  {item.name}
-                </h2>
+              <div className="relative">
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="w-full rounded-t-md object-cover"
+                  style={{ height: 300 }}
+                />
+              </div>
+              <div className="p-4">
+                <h2 className={`text-lg font-bold text-white`}>{item.name}</h2>
                 <p className="mt-2 text-gray-300">{item.skills}</p>
                 <div className="flex flex-row justify-center gap-5">
                   <a

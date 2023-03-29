@@ -12,6 +12,7 @@ export default function Career() {
               key={item.key}
               className="rounded-md bg-white p-4 shadow-md"
               data-aos="fade-up"
+              data-aos-duration="1300"
             >
               <h2 className="text-lg font-bold text-gray-900">{item.name}</h2>
               <p className="mt-2 text-gray-700">소속: {item.company}</p>
