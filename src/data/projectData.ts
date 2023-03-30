@@ -25,20 +25,4 @@ export const projectData: Array<ProjectItem> = [
     image: 'assets/projects/clone-netflix.png',
     github: 'https://github.com/wonseok-han/clone-netflix',
   },
-  {
-    key: '3',
-    name: 'test2',
-    skills:
-      'Typescript, React, styled-components, Framer-Motion, Recoil, react-query',
-    url: 'https://wonseok-han.github.io/clone-netflix',
-    image: 'https://dummyimage.com/1024x400/999/fff',
-  },
-  {
-    key: '4',
-    name: 'test3',
-    skills:
-      'Typescript, React, styled-components, Framer-Motion, Recoil, react-query',
-    url: 'https://wonseok-han.github.io/clone-netflix',
-    image: 'https://dummyimage.com/1024x400/999/fff',
-  },
 ];
