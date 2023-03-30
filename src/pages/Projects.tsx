@@ -1,6 +1,6 @@
 import { FaGithub } from 'react-icons/fa';
 
-import { projectData, ProjectItem } from 'data/portfolioData';
+import { projectData, ProjectItem } from 'data/projectData';
 
 const Projects = () => {
   return (
