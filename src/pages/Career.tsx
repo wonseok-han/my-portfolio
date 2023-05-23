@@ -36,7 +36,7 @@ const Career = () => {
                     - 담당: {item.role}
                   </p>
                   <p className="mt-1 ml-2 text-sm text-gray-600">
-                    - 기술:d {item.skills}
+                    - 기술: {item.skills}
                   </p>
                 </div>
               ))}
