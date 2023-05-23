@@ -25,4 +25,12 @@ export const projectData: Array<ProjectItem> = [
     image: 'assets/projects/clone-netflix.png',
     github: 'https://github.com/wonseok-han/clone-netflix',
   },
+  {
+    key: '3',
+    name: 'My Utilities',
+    skills: 'Typescript, React, Tailwind',
+    url: 'https://wonseok-han.github.io/my-utilities/',
+    image: 'assets/projects/progress.png',
+    github: 'https://github.com/wonseok-han/my-utilities',
+  },
 ];
