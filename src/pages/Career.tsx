@@ -22,21 +22,21 @@ const Career = () => {
               {company.projects.map((item: CareerItem) => (
                 <div
                   key={item.key}
-                  className="mb-1 ml-2 p-3 shadow-sm"
+                  className="mb-1  p-3 shadow-sm"
                   data-aos="fade-up"
                   data-aos-duration="1300"
                 >
                   <h2 className="text-sm font-bold text-gray-900">
-                    {item.name}
+                    • {item.name}
                   </h2>
-                  <p className="mt-1 text-sm text-gray-600">
-                    기간: {item.term}
+                  <p className="mt-1 ml-2 text-sm text-gray-600">
+                    - 기간: {item.term}
                   </p>
-                  <p className="mt-1 text-sm text-gray-600">
-                    담당: {item.role}
+                  <p className="mt-1 ml-2 text-sm text-gray-600">
+                    - 담당: {item.role}
                   </p>
-                  <p className="mt-1 text-sm text-gray-600">
-                    기술: {item.skills}
+                  <p className="mt-1 ml-2 text-sm text-gray-600">
+                    - 기술: {item.skills}
                   </p>
                 </div>
               ))}
