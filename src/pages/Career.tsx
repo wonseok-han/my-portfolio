@@ -19,7 +19,7 @@ const Career = () => {
             <h2 className="text-xl font-bold text-gray-900">
               {company.name} ({company.term})
             </h2>
-            <div className="flex w-full space-x-5 border-t border-b-[2px] px-4 py-2.5 text-gray-700">
+            <div className="w-full border-t border-b-[2px] px-4 py-2.5 text-gray-700 sm:grid sm:grid-cols-1 sm:space-x-1 lg:flex lg:space-x-5">
               <h2 className="text-lg font-bold text-gray-900">
                 <div className="flex items-center">
                   <svg
@@ -43,14 +43,14 @@ const Career = () => {
                 {company.works.map((work, index) => (
                   <p
                     key={`${index}-${work}`}
-                    className="ml-2 text-sm text-gray-600"
+                    className="text-sm text-gray-600 sm:ml-0 sm:mt-2 lg:mt-0 lg:ml-2"
                   >
                     - {work}
                   </p>
                 ))}
               </div>
             </div>
-            <div className="flex w-full space-x-5 border-t border-b-[2px] px-4 py-2.5 text-gray-700">
+            <div className="w-full border-t border-b-[2px] px-4 py-2.5 text-gray-700 sm:grid sm:grid-cols-1 sm:space-x-1 lg:flex lg:space-x-5">
               <h2 className="text-lg font-bold text-gray-900">
                 <div className="flex items-center">
                   <svg
@@ -74,7 +74,7 @@ const Career = () => {
                 {company.projects.map((item: CareerItem) => (
                   <div
                     key={item.key}
-                    className="mt-1 ml-2 text-sm text-gray-600"
+                    className="text-sm text-gray-600 sm:ml-0 sm:mt-2 lg:mt-0 lg:ml-2"
                     data-aos-duration="1300"
                   >
                     <h2 className="text-sm font-bold text-gray-900">
