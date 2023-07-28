@@ -2,6 +2,7 @@ export interface CareerCompany {
   key: string;
   name: string;
   term: string;
+  works: Array<string>;
   projects: Array<CareerItem>;
 }
 
@@ -9,9 +10,9 @@ export interface CareerItem {
   key: string;
   name: string;
   term: string;
-  role: string;
+  roles: Array<string>;
   skills: string;
-  company: string;
+  intro: string;
 }
 
 export const careerData: Array<CareerCompany> = [
@@ -19,126 +20,160 @@ export const careerData: Array<CareerCompany> = [
     key: '1',
     name: '(주)도울정보기술',
     term: '2018. 07 ~ 2023. 04',
+    works: [
+      '프레임워크 공통 표준/컴포넌트 개발',
+      '프로젝트 업무 화면/API 개발',
+      '웹서비스 유지보수',
+    ],
     projects: [
       {
         key: '14',
         name: '영남이공대 원스탑시스템 고도화',
-        term: '2023. 02. ~ 2023. 04',
-        role: '카카오톡 알림, 위원회 관리, 휴가/출장현황 개발',
+        term: '2023. 02. ~ 2023. 04.(3개월)',
+        roles: ['기획팀, 학적팀 화면/API 개발'],
         skills: 'NexacroN, eGovFramework, Oracle',
-        company: '(주)도울정보기술',
+        intro: '영남이공대학교 종합정보시스템 Legacy를 리뉴얼하는 프로젝트',
       },
       {
         key: '13',
         name: '대우조선해양 정부과제관리시스템',
-        term: '2022. 11. ~ 2023.01',
-        role: '정부과제관리 화면 분석/설계/개발',
+        term: '2022. 11. ~ 2023.01.(3개월)',
+        roles: ['요구사항 분석/화면 설계', '업무 화면/API 개발'],
         skills: 'Nexacro17, eGovFramework, Oracle',
-        company: '(주)도울정보기술',
+        intro:
+          '대우조선해양 연구 부서의 정부과제에 대한 기술 수요를 등록하고, 정부과제를 등록/관리 하는 시스템을 구축하는 프로젝트',
       },
       {
         key: '12',
         name: 'CLT 터미널운영시스템',
-        term: '2022. 04. ~ 2022. 10.',
-        role: '컨테이너운영 화면 개발',
+        term: '2022. 04. ~ 2022. 10.(6개월)',
+        roles: [
+          'Legacy 터미널운영시스템 화면 유지보수',
+          '리뉴얼 시스템 화면/API 개발',
+        ],
         skills: 'React, SpringBoot, Flex, Spring, Oracle',
-        company: '(주)도울정보기술',
+        intro:
+          'Flex로 개발된 항만 컨테이너 터미널 운영시스템 Legacy를 유지보수하면서 React, Springboot로 리뉴얼하는 프로젝트',
       },
       {
         key: '11',
         name: '부산상수도 차세대 경영지원정보시스템',
         term: '2021. 08. ~ 2022. 03.(8개월)',
-        role: '수질, 자산 파트 개발',
+        roles: [
+          '수질/자산 업무 화면/API 개발',
+          '사용자 Needs에 맞는 사용성 개선',
+        ],
         skills: 'Websquare, eGovFramework, Oracle, Crownix Report',
-        company: '(주)도울정보기술',
+        intro:
+          '부산 상수도사업본부에서 사용하는 경영지원정보시스템 Legacy를 리뉴얼하는 프로젝트',
       },
       {
         key: '10',
         name: '부산대학교 차세대 스마트 교육정보시스템',
         term: '2020. 12. ~ 2021. 07.(8개월)',
-        role: 'Architecture, 공통 화면 및 기능 개발',
+        roles: [
+          'Architecture 구성',
+          '시스템 공통 화면/API 개발',
+          '비즈니스 업무 화면 개발 기술 지원',
+        ],
         skills: 'React, Django, MsSql',
-        company: '(주)도울정보기술',
+        intro: '부산대학교 교육정보시스템 Legacy를 리뉴얼하는 프로젝트',
       },
       {
         key: '9',
         name: '동의과학대 학사행정시스템 구축',
         term: '2020. 08. ~ 2020. 11.(4개월)',
-        role: '시스템 공통 표준화, 학사행정 파트 개발',
+        roles: ['시스템 공통 표준화', '학사행정 업무 파트 화면/API 개발'],
         skills: 'Nexacro17, eGovFramework, Oracle',
-        company: '(주)도울정보기술',
+        intro: '동의과학대학교 학사행정시스템 Legacy를 리뉴얼하는 프로젝트',
       },
       {
         key: '8',
         name: '동의과학대 일반행정시스템',
         term: '2020. 07 ~ 2020. 07.(1개월)',
-        role: '일반행정 파트 개발',
+        roles: ['일반행정 업무 파트 화면/API 개발'],
         skills: 'Nexacro17, eGovFramework, Oracle',
-        company: '(주)도울정보기술',
+        intro: '동의과학대학교 일반행정시스템 Legacy를 리뉴얼하는 프로젝트',
       },
       {
         key: '7',
         name: '부산대학교 차세대 시스템 ISP',
         term: '2020. 03. ~ 2020. 06.(4개월)',
-        role: 'Architecture, 개발',
+        roles: ['Architecture 구성', '요구된 샘플화면/API 개발'],
         skills: 'React, Django, MySQL',
-        company: '(주)도울정보기술',
+        intro:
+          '부산대학교 교육정보시스템 Legacy를 리뉴얼하기 위한 파일럿 프로젝트',
       },
       {
         key: '6',
         name: '한국자산관리공사 전산자산 관리시스템',
         term: '2019. 01. ~ 2020. 02.(2개월)',
-        role: '시스템 공통 표준화, 공통 화면 개발',
+        roles: ['시스템 공통 표준화', '공통 화면 개발'],
         skills: 'Nexacro14, eGovFramework, Oracle',
-        company: '(주)도울정보기술',
+        intro:
+          '한국자산관리공사 전산자신관리시스템 Legacy를 리뉴얼하는 프로젝트',
       },
       {
         key: '5',
         name: '대우조선해양-연구과제평가시스템',
         term: '2019. 10. ~ 2019. 12.(3개월)',
-        role: '연구과제평가 파트 개발',
+        roles: ['평가기준, 평가항목, 집계 등 화면/API 개발'],
         skills: 'Nexacro17, eGovFramework, Oracle',
-        company: '(주)도울정보기술',
+        intro:
+          '대우조선해양 연구 부서의 연구과제를 평가하는 신규 시스템 구축 프로젝트',
       },
       {
         key: '4',
         name: '대우조선해양-연구과제관리시스템',
         term: '2019. 09. ~ 2019. 09.(1개월)',
-        role: '화면 수정사항 개선',
+        roles: ['JSP로 개발되있는 Legacy 화면 이슈사항 개선'],
         skills: 'JSP, Oracle',
-        company: '(주)도울정보기술',
+        intro:
+          '대우조선해양 연구 부서의 연구과제를 관리하는 Legacy의 이슈사항을 보완/개선하는 프로젝트',
       },
       {
         key: '3',
         name: '부경대학교 연구과제시스템 통합장비 관리',
         term: '2019. 08. ~ 2019. 08.(1개월)',
-        role: '화면 개발',
+        roles: ['Flex로 개발되있는 Legacy 화면 수정, 추가 화면 개발'],
         skills: 'Flex, Spring, Oracle',
-        company: '(주)도울정보기술',
+        intro:
+          '부경대학교 연구과제시스템 Legacy의 이슈사항을 보완/개선하는 프로젝트',
       },
       {
         key: '2',
         name: '부산교통공사 예산회계 모니터링',
         term: '2019. 07. ~ 2019. 07.(1개월)',
-        role: '추가 예산 화면 12본 개발',
+        roles: ['예산 업무 파트 화면/API 추가 개발'],
         skills: 'Nexacro17, eGovFramework, Oracle',
-        company: '(주)도울정보기술',
+        intro:
+          '부산교통공사 예산회계시스템에서 추가 화면/API를 개발하는 프로젝트',
       },
       {
         key: '1',
         name: '부산대학교 교육기부',
         term: '2019. 03. ~ 2019. 06.(4개월)',
-        role: '멘토-멘티 매칭, 멘토링 계획 및 출석 파트 개발',
-        skills: 'jQuery, Django, MySQL',
-        company: '(주)도울정보기술',
+        roles: [
+          '멘토링 계획서 및 출석 화면/API 개발',
+          '사용자 Needs에 맞는 사용성 개선',
+          '서비스 유지보수',
+          '앱 유지보수',
+        ],
+        skills: 'jQuery, Django, MySQL, ReactNative',
+        intro:
+          '부산대학교 학생/초등생의 멘토-멘티 매칭, 멘토링 서비스를 개발하는 프로젝트',
       },
       {
         key: '0',
         name: '계명문화대 차세대 입시시스템',
         term: '2018. 08. ~ 2019. 02.(7개월)',
-        role: '입시, 장학생 선정 파트 개발',
+        roles: [
+          '입시, 장학생 선정 업무 화면/API 개발',
+          '사용자 Needs에 맞는 사용성 개선',
+          '서비스 유지보수',
+        ],
         skills: 'Nexacro14, eGovFramework, Oracle, ClipReport',
-        company: '(주)도울정보기술',
+        intro: '계명문화대학교 입시시스템 Legacy를 리뉴얼하는 프로젝트',
       },
     ],
   },
