@@ -29,8 +29,11 @@ const Projects = () => {
                 />
               </div>
               <div className="p-4">
-                <h2 className={`text-lg font-bold text-white`}>{item.name}</h2>
-                <p className="mt-2 text-gray-300">{item.skills}</p>
+                <h2 className={`text-xl font-bold text-white`}>{item.name}</h2>
+                <p className="mt-2 text-gray-300">{item.intro}</p>
+                <p className="mt-2 text-sm text-gray-300">
+                  사용기술: {item.skills}
+                </p>
                 <div className="flex flex-row justify-center gap-5">
                   <a
                     href={item.url}
