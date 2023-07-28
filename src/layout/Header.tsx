@@ -95,18 +95,21 @@ export default function Header({ toggleDarkMode }: HeaderProps) {
             <Link
               to="/"
               className="my-4 text-lg font-extrabold hover:text-blue-400 hover:underline"
+              onClick={handleMenuButtonClick}
             >
               Home
             </Link>
             <Link
               to="/career"
               className="my-4 text-lg font-extrabold hover:text-blue-400 hover:underline"
+              onClick={handleMenuButtonClick}
             >
               Career
             </Link>
             <Link
               to="/portfolio"
               className="my-4 text-lg font-extrabold hover:text-blue-400 hover:underline"
+              onClick={handleMenuButtonClick}
             >
               Projects
             </Link>
