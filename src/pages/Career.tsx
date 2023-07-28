@@ -50,7 +50,7 @@ const Career = () => {
                 ))}
               </div>
             </div>
-            <div className="w-full border-t border-b-[2px] px-4 py-2.5 text-gray-700 sm:grid sm:grid-cols-1 sm:space-x-1 lg:flex lg:space-x-5">
+            <div className="w-full border-b-[2px] px-4 py-2.5 text-gray-700 sm:grid sm:grid-cols-1 sm:space-x-1 lg:flex lg:space-x-5">
               <h2 className="text-lg font-bold text-gray-900">
                 <div className="flex items-center">
                   <svg
