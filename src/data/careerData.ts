@@ -1,21 +1,20 @@
-export interface CareerCompany {
-  key: string;
-  name: string;
-  term: string;
-  works: Array<string>;
-  projects: Array<CareerItem>;
-}
-
-export interface CareerItem {
+export interface Project {
   key: string;
   name: string;
   term: string;
   roles: Array<string>;
-  skills: string;
+  skills: Array<string>;
   intro: string;
 }
+export interface Company {
+  key: string;
+  name: string;
+  term: string;
+  works: Array<string>;
+  projects: Array<Project>;
+}
 
-export const careerData: Array<CareerCompany> = [
+export const careerData: Array<Company> = [
   {
     key: '1',
     name: '(주)도울정보기술',
@@ -31,7 +30,7 @@ export const careerData: Array<CareerCompany> = [
         name: '영남이공대 원스탑시스템 고도화',
         term: '2023. 02. ~ 2023. 04.(3개월)',
         roles: ['기획팀, 학적팀 화면/API 개발'],
-        skills: 'NexacroN, eGovFramework, Oracle',
+        skills: ['NexacroN', 'eGovFramework', 'Oracle'],
         intro: '영남이공대학교 종합정보시스템 Legacy를 리뉴얼하는 프로젝트',
       },
       {
@@ -39,7 +38,7 @@ export const careerData: Array<CareerCompany> = [
         name: '대우조선해양 정부과제관리시스템',
         term: '2022. 11. ~ 2023.01.(3개월)',
         roles: ['요구사항 분석/화면 설계', '업무 화면/API 개발'],
-        skills: 'Nexacro17, eGovFramework, Oracle',
+        skills: ['Nexacro17', 'eGovFramework', 'Oracle'],
         intro:
           '대우조선해양 연구 부서의 정부과제에 대한 기술 수요를 등록하고, 정부과제를 등록/관리 하는 시스템을 구축하는 프로젝트',
       },
@@ -51,7 +50,7 @@ export const careerData: Array<CareerCompany> = [
           'Legacy 터미널운영시스템 화면 유지보수',
           '리뉴얼 시스템 화면/API 개발',
         ],
-        skills: 'React, SpringBoot, Flex, Spring, Oracle',
+        skills: ['React', 'SpringBoot', 'Flex', 'Spring', 'Oracle'],
         intro:
           'Flex로 개발된 항만 컨테이너 터미널 운영시스템 Legacy를 유지보수하면서 React, Springboot로 리뉴얼하는 프로젝트',
       },
@@ -63,7 +62,7 @@ export const careerData: Array<CareerCompany> = [
           '수질/자산 업무 화면/API 개발',
           '사용자 Needs에 맞는 사용성 개선',
         ],
-        skills: 'Websquare, eGovFramework, Oracle, Crownix Report',
+        skills: ['Websquare', 'eGovFramework', 'Oracle', 'Crownix Report'],
         intro:
           '부산 상수도사업본부에서 사용하는 경영지원정보시스템 Legacy를 리뉴얼하는 프로젝트',
       },
@@ -76,7 +75,7 @@ export const careerData: Array<CareerCompany> = [
           '시스템 공통 화면/API 개발',
           '비즈니스 업무 화면 개발 기술 지원',
         ],
-        skills: 'React, Django, MsSql',
+        skills: ['React', 'Django', 'MsSql'],
         intro: '부산대학교 교육정보시스템 Legacy를 리뉴얼하는 프로젝트',
       },
       {
@@ -84,7 +83,7 @@ export const careerData: Array<CareerCompany> = [
         name: '동의과학대 학사행정시스템 구축',
         term: '2020. 08. ~ 2020. 11.(4개월)',
         roles: ['시스템 공통 표준화', '학사행정 업무 파트 화면/API 개발'],
-        skills: 'Nexacro17, eGovFramework, Oracle',
+        skills: ['Nexacro17', 'eGovFramework', 'Oracle'],
         intro: '동의과학대학교 학사행정시스템 Legacy를 리뉴얼하는 프로젝트',
       },
       {
@@ -92,7 +91,7 @@ export const careerData: Array<CareerCompany> = [
         name: '동의과학대 일반행정시스템',
         term: '2020. 07 ~ 2020. 07.(1개월)',
         roles: ['일반행정 업무 파트 화면/API 개발'],
-        skills: 'Nexacro17, eGovFramework, Oracle',
+        skills: ['Nexacro17', 'eGovFramework', 'Oracle'],
         intro: '동의과학대학교 일반행정시스템 Legacy를 리뉴얼하는 프로젝트',
       },
       {
@@ -100,7 +99,7 @@ export const careerData: Array<CareerCompany> = [
         name: '부산대학교 차세대 시스템 ISP',
         term: '2020. 03. ~ 2020. 06.(4개월)',
         roles: ['Architecture 구성', '요구된 샘플화면/API 개발'],
-        skills: 'React, Django, MySQL',
+        skills: ['React', 'Django', 'MySQL'],
         intro:
           '부산대학교 교육정보시스템 Legacy를 리뉴얼하기 위한 파일럿 프로젝트',
       },
@@ -109,7 +108,7 @@ export const careerData: Array<CareerCompany> = [
         name: '한국자산관리공사 전산자산 관리시스템',
         term: '2019. 01. ~ 2020. 02.(2개월)',
         roles: ['시스템 공통 표준화', '공통 화면 개발'],
-        skills: 'Nexacro14, eGovFramework, Oracle',
+        skills: ['Nexacro14', 'eGovFramework', 'Oracle'],
         intro:
           '한국자산관리공사 전산자신관리시스템 Legacy를 리뉴얼하는 프로젝트',
       },
@@ -118,7 +117,7 @@ export const careerData: Array<CareerCompany> = [
         name: '대우조선해양-연구과제평가시스템',
         term: '2019. 10. ~ 2019. 12.(3개월)',
         roles: ['평가기준, 평가항목, 집계 등 화면/API 개발'],
-        skills: 'Nexacro17, eGovFramework, Oracle',
+        skills: ['Nexacro17', 'eGovFramework', 'Oracle'],
         intro:
           '대우조선해양 연구 부서의 연구과제를 평가하는 신규 시스템 구축 프로젝트',
       },
@@ -127,7 +126,7 @@ export const careerData: Array<CareerCompany> = [
         name: '대우조선해양-연구과제관리시스템',
         term: '2019. 09. ~ 2019. 09.(1개월)',
         roles: ['JSP로 개발되있는 Legacy 화면 이슈사항 개선'],
-        skills: 'JSP, Oracle',
+        skills: ['JSP', 'Oracle'],
         intro:
           '대우조선해양 연구 부서의 연구과제를 관리하는 Legacy의 이슈사항을 보완/개선하는 프로젝트',
       },
@@ -136,7 +135,7 @@ export const careerData: Array<CareerCompany> = [
         name: '부경대학교 연구과제시스템 통합장비 관리',
         term: '2019. 08. ~ 2019. 08.(1개월)',
         roles: ['Flex로 개발되있는 Legacy 화면 수정, 추가 화면 개발'],
-        skills: 'Flex, Spring, Oracle',
+        skills: ['Flex', 'Spring', 'Oracle'],
         intro:
           '부경대학교 연구과제시스템 Legacy의 이슈사항을 보완/개선하는 프로젝트',
       },
@@ -145,7 +144,7 @@ export const careerData: Array<CareerCompany> = [
         name: '부산교통공사 예산회계 모니터링',
         term: '2019. 07. ~ 2019. 07.(1개월)',
         roles: ['예산 업무 파트 화면/API 추가 개발'],
-        skills: 'Nexacro17, eGovFramework, Oracle',
+        skills: ['Nexacro17', 'eGovFramework', 'Oracle'],
         intro:
           '부산교통공사 예산회계시스템에서 추가 화면/API를 개발하는 프로젝트',
       },
@@ -159,7 +158,7 @@ export const careerData: Array<CareerCompany> = [
           '서비스 유지보수',
           '앱 유지보수',
         ],
-        skills: 'jQuery, Django, MySQL, ReactNative',
+        skills: ['jQuery', 'Django', 'MySQL', 'ReactNative'],
         intro:
           '부산대학교 학생/초등생의 멘토-멘티 매칭, 멘토링 서비스를 개발하는 프로젝트',
       },
@@ -172,7 +171,7 @@ export const careerData: Array<CareerCompany> = [
           '사용자 Needs에 맞는 사용성 개선',
           '서비스 유지보수',
         ],
-        skills: 'Nexacro14, eGovFramework, Oracle, ClipReport',
+        skills: ['Nexacro14', 'eGovFramework', 'Oracle', 'ClipReport'],
         intro: '계명문화대학교 입시시스템 Legacy를 리뉴얼하는 프로젝트',
       },
     ],
@@ -188,7 +187,7 @@ export const careerData: Array<CareerCompany> = [
         name: '하이퍼스퀘어 블록체인',
         term: '2023. 08. ~ ',
         roles: ['프론트엔드 개발'],
-        skills: 'React',
+        skills: ['React'],
         intro: '',
       },
     ],

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/indent */
-import { careerData, CareerItem, CareerCompany } from 'data/careerData';
+import { careerData, Project, Company } from 'data/careerData';
 import { cls } from 'lib/utils';
 
 const colors = [
@@ -23,7 +23,7 @@ const Career = () => {
         <hr className="mt-2 h-1 bg-gray-700" />
         {careerData
           .sort((a, b) => (a.key > b.key ? -1 : a.key < b.key ? 1 : 0))
-          .map((company: CareerCompany) => (
+          .map((company: Company) => (
             <div
               key={company.key}
               className="mt-4 space-y-4 rounded-md bg-white p-4 shadow-md"
@@ -85,26 +85,26 @@ const Career = () => {
                   </div>
                 </h2>
                 <div className="flex flex-col space-y-4">
-                  {company.projects.map((item: CareerItem) => (
+                  {company.projects.map((project: Project) => (
                     <div
-                      key={item.key}
+                      key={project.key}
                       className="text-sm text-gray-600 sm:ml-0 sm:mt-2 lg:mt-0 lg:ml-2"
                       data-aos-duration="1300"
                     >
                       <h2 className="text-sm font-bold text-gray-900">
-                        • {item.name}
+                        • {project.name}
                       </h2>
                       <p className="mt-1 ml-3 text-sm text-gray-600">
-                        ‣ 소개: {item.intro}
+                        ‣ 소개: {project.intro}
                       </p>
                       <p className="mt-1 ml-3 text-sm text-gray-600">
-                        ‣ 기간: {item.term}
+                        ‣ 기간: {project.term}
                       </p>
                       <div className="mt-1 ml-3 flex text-sm text-gray-600">
                         ‣ 업무:
                         <div className="flex flex-col space-y-1">
-                          {item.roles && item.roles.length > 0
-                            ? item.roles.map((role, index) => (
+                          {project.roles && project.roles.length > 0
+                            ? project.roles.map((role, index) => (
                                 <div key={`${index}-${role}`}>
                                   <p className="ml-1 text-sm text-gray-600">
                                     - {role}
@@ -114,28 +114,29 @@ const Career = () => {
                             : null}
                         </div>
                       </div>
-                      {/* <p className="mt-1 ml-3 text-sm text-gray-600">
-                        ‣ 기술: {item.skills}
-                      </p> */}
-                      <div className="mt-1 ml-3 flex items-center text-sm text-gray-600">
+                      <div className="mt-1 ml-3 flex items-start text-sm text-gray-600 sm:items-center">
                         ‣ 기술:
-                        {['React', 'Django', 'Oracle'].map((skill, index) => {
-                          const randomColor =
-                            colors[Math.floor(Math.random() * colors.length)];
-                          const bgColor = `bg-${randomColor}-300`;
-                          const borderColor = `border-${randomColor}-500`;
+                        <div className="ml-1 grid grid-cols-1 space-y-1 sm:flex sm:flex-row sm:space-x-1 sm:space-y-0">
+                          {project.skills.map((skill, index) => {
+                            const randomColor =
+                              colors[Math.floor(Math.random() * colors.length)];
+                            const bgColor = `bg-${randomColor}-300`;
+                            const borderColor = `border-${randomColor}-500`;
 
-                          return (
-                            <div
-                              key={`${index}-${skill}`}
-                              className={cls(
-                                `${bgColor} ${borderColor} ml-1 flex rounded border p-0.5 text-xs text-gray-600`
-                              )}
-                            >
-                              {skill}
-                            </div>
-                          );
-                        })}
+                            return (
+                              <div
+                                key={`${index}-${skill}`}
+                                className={cls(
+                                  `${bgColor} ${borderColor} rounded border`
+                                )}
+                              >
+                                <p className="p-1 text-xs text-gray-600">
+                                  {skill}
+                                </p>
+                              </div>
+                            );
+                          })}
+                        </div>
                       </div>
                     </div>
                   ))}
