@@ -28,7 +28,7 @@ export default function Header({ toggleDarkMode }: HeaderProps) {
     >
       <nav className="flex h-full items-center justify-between px-4">
         <Link to="/" className="text-lg font-extrabold hover:text-blue-400">
-          <h1 className="text-4xl">wonseok-han</h1>
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl">wonseok-han</h1>
         </Link>
         <div className="hidden items-center space-x-4 md:flex">
           <Link

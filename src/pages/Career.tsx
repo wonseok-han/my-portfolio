@@ -17,7 +17,7 @@ const Career = () => {
   return (
     <div className="h-full bg-gray-100">
       <div className="mx-auto max-w-full py-16 px-4 sm:px-6 lg:px-8">
-        <div className="font-sans text-5xl font-black text-gray-900">
+        <div className="font-sans text-3xl font-black text-gray-900 sm:text-4xl lg:text-5xl">
           Career
         </div>
         <hr className="mt-2 h-1 bg-gray-700" />

@@ -13,7 +13,7 @@ const Home = () => {
         data-aos="fade-up"
         data-aos-duration="1500"
       >
-        <div className="font-sans text-4xl font-extrabold text-gray-900">
+        <div className="font-sans text-3xl font-extrabold text-gray-900 sm:text-4xl lg:text-5xl">
           About Me
         </div>
         <hr className="mt-2 h-1 bg-gray-700" />
@@ -37,7 +37,7 @@ const Home = () => {
             </div>
           )}
         </div>
-        <div className="mt-10 font-sans text-4xl font-extrabold text-gray-900">
+        <div className="mt-10 font-sans text-3xl font-extrabold text-gray-900 sm:text-4xl lg:text-5xl">
           Skills
         </div>
         <hr className="mt-2 h-1 bg-gray-700" />
