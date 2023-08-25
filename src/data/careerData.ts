@@ -177,4 +177,20 @@ export const careerData: Array<CareerCompany> = [
       },
     ],
   },
+  {
+    key: '2',
+    name: '(주)이노그리드',
+    term: '2023. 03 ~ ',
+    works: ['프로젝트 프론트엔드 개발'],
+    projects: [
+      {
+        key: '1',
+        name: '하이퍼스퀘어 블록체인',
+        term: '2023. 08. ~ ',
+        roles: ['프론트엔드 개발'],
+        skills: 'React',
+        intro: '',
+      },
+    ],
+  },
 ];
