@@ -30,7 +30,7 @@ export const userData: UserItem = {
   address: '부산광역시 부산진구',
   phone: '010-5587-9132',
   email: 'oshan1112@gmail.com',
-  company: '',
+  company: '(주)이노그리드',
 };
 
 export const userDataKeyName: UserItem = {
