@@ -23,7 +23,7 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       <ThemeContext.Provider value={{ isDarkMode, toggleDarkMode }}>
         <div
           className={`flex min-h-full flex-col ${
