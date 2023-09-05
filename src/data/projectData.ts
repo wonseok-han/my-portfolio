@@ -32,9 +32,9 @@ export const projectData: Array<ProjectItem> = [
     key: '3',
     name: 'My Utilities',
     skills: 'Typescript, React, Tailwind',
-    url: 'https://wonseok-han.github.io/my-utilities/',
-    image: 'assets/projects/progress.png',
+    url: 'https://my-utilities.pages.dev/',
+    image: 'assets/projects/my-utilities.png',
     github: 'https://github.com/wonseok-han/my-utilities',
-    intro: '',
+    intro: '자주 사용하는 기능 또는 함수를 구현한 유틸리티 사이트',
   },
 ];
