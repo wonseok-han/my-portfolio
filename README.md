@@ -1,6 +1,6 @@
 ## wonseok-han's portfolio page
 
-* https://d8d9afc2.my-portfolio-1tk.pages.dev/
+* https://wonseok-han.dev/
 
 
 ## Overview
