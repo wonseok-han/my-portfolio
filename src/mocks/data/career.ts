@@ -1,20 +1,4 @@
-export interface Project {
-  key: string;
-  name: string;
-  term: string;
-  roles: Array<string>;
-  skills: Array<string>;
-  intro: string;
-}
-export interface Company {
-  key: string;
-  name: string;
-  term: string;
-  works: Array<string>;
-  projects: Array<Project>;
-}
-
-export const careerData: Array<Company> = [
+export const careerData = [
   {
     key: '1',
     name: '(주)도울정보기술',

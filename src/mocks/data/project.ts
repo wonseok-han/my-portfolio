@@ -1,14 +1,4 @@
-export interface ProjectItem {
-  key: string;
-  name: string;
-  skills: string;
-  url: string;
-  image?: string;
-  github?: string;
-  intro?: string;
-}
-
-export const projectData: Array<ProjectItem> = [
+export const projectData = [
   {
     key: '1',
     name: 'Portfolio',

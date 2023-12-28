@@ -23,7 +23,7 @@ export const request = async <T = unknown>({
   data,
   params,
 }: AxiosRequestConfig): Promise<AxiosResponse<T>> => {
-  return await instance({
+  return await instance.request<T>({
     method,
     url: params ? url + `?${queryString.stringify(params)}` : url,
     headers,

@@ -1,28 +1,57 @@
-import config from 'config';
 import { request } from 'config/axios';
+import {
+  CompanyProps,
+  SideProjectProps,
+  SkillProps,
+  UserProps,
+} from 'types/data';
 
 export const urls = {
+  user: () => {
+    return `/user`;
+  },
+  skills: () => {
+    return `/skills`;
+  },
   career_list: () => {
-    return `/${config.DATABASE_ID_CAREER}/query`;
+    return `/careers`;
   },
   project_list: () => {
-    return `/${config.DATABASE_ID_PROJECT}/query`;
+    return `/projects`;
   },
 };
 
 export const apis = {
-  getCareers: async () => {
-    return await request({
-      method: 'POST',
-      url: urls.career_list(),
-      headers: { Authorization: `Bearer ${config.SECRET_KEY_CAREER}` },
+  getUser: async (): Promise<UserProps> => {
+    const response = await request({
+      method: 'GET',
+      url: urls.user(),
     });
+
+    return response.data as UserProps;
   },
-  getProjects: async () => {
-    return await request({
-      method: 'POST',
-      url: urls.project_list(),
-      headers: { Authorization: `Bearer ${config.SECRET_KEY_PROJECT}` },
+  getSkills: async (): Promise<SkillProps> => {
+    const response = await request({
+      method: 'GET',
+      url: urls.skills(),
     });
+
+    return response.data as SkillProps;
+  },
+  getCareers: async (): Promise<Array<CompanyProps>> => {
+    const response = await request({
+      method: 'GET',
+      url: urls.career_list(),
+    });
+
+    return response.data as Array<CompanyProps>;
+  },
+  getProjects: async (): Promise<Array<SideProjectProps>> => {
+    const response = await request({
+      method: 'GET',
+      url: urls.project_list(),
+    });
+
+    return response.data as Array<SideProjectProps>;
   },
 };
