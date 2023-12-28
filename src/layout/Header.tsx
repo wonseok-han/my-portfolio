@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/naming-convention */
 import { useState } from 'react';
 import { FiMoon, FiSun, FiMenu } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
@@ -27,25 +26,25 @@ export default function Header({ toggleDarkMode }: HeaderProps) {
       className={`fixed inset-x-0 top-0 h-16 shadow-md ${bgColor} ${textColor} z-50`}
     >
       <nav className="flex h-full items-center justify-between px-4">
-        <Link to="/" className="text-lg font-extrabold hover:text-blue-400">
+        <Link className="text-lg font-extrabold hover:text-blue-400" to="/">
           <h1 className="text-2xl sm:text-3xl lg:text-4xl">wonseok-han</h1>
         </Link>
         <div className="hidden items-center space-x-4 md:flex">
           <Link
-            to="/"
             className="text-lg font-extrabold hover:text-blue-400 hover:underline"
+            to="/"
           >
             Home
           </Link>
           <Link
-            to="/career"
             className="text-lg font-extrabold hover:text-blue-400 hover:underline"
+            to="/career"
           >
             Career
           </Link>
           <Link
-            to="/portfolio"
             className="text-lg font-extrabold hover:text-blue-400 hover:underline"
+            to="/portfolio"
           >
             Projects
           </Link>
@@ -69,14 +68,14 @@ export default function Header({ toggleDarkMode }: HeaderProps) {
               <svg
                 className="h-6 w-6 text-white"
                 fill="none"
-                viewBox="0 0 24 24"
                 stroke="currentColor"
+                viewBox="0 0 24 24"
               >
                 <path
+                  d="M6 18L18 6M6 6l12 12"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
                 />
               </svg>
             ) : (
@@ -93,22 +92,22 @@ export default function Header({ toggleDarkMode }: HeaderProps) {
         >
           <div className="flex flex-col items-center">
             <Link
-              to="/"
               className="my-4 text-lg font-extrabold hover:text-blue-400 hover:underline"
+              to="/"
               onClick={handleMenuButtonClick}
             >
               Home
             </Link>
             <Link
-              to="/career"
               className="my-4 text-lg font-extrabold hover:text-blue-400 hover:underline"
+              to="/career"
               onClick={handleMenuButtonClick}
             >
               Career
             </Link>
             <Link
-              to="/portfolio"
               className="my-4 text-lg font-extrabold hover:text-blue-400 hover:underline"
+              to="/portfolio"
               onClick={handleMenuButtonClick}
             >
               Projects

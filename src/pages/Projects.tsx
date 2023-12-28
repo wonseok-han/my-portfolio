@@ -5,7 +5,7 @@ import { projectData, ProjectItem } from 'data/projectData';
 const Projects = () => {
   return (
     <div className="h-full bg-gray-100">
-      <div className="mx-auto max-w-full py-16 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-full px-4 py-16 sm:px-6 lg:px-8">
         <div className="font-sans text-3xl font-black text-gray-900 sm:text-4xl lg:text-5xl">
           Projects
         </div>
@@ -22,9 +22,9 @@ const Projects = () => {
             >
               <div className="relative">
                 <img
-                  src={item.image}
                   alt={item.name}
                   className="w-full rounded-t-md object-cover object-top"
+                  src={item.image}
                   style={{ height: 300 }}
                 />
               </div>
@@ -36,18 +36,18 @@ const Projects = () => {
                 </p>
                 <div className="flex flex-row justify-center gap-5">
                   <a
-                    href={item.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="mt-4 inline-block rounded bg-blue-600 px-4 py-2 font-bold text-white hover:bg-blue-800"
+                    href={item.url}
+                    rel="noopener noreferrer"
+                    target="_blank"
                   >
                     View Page
                   </a>
                   <a
-                    href={item.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="mt-4 inline-block rounded font-bold text-white"
+                    href={item.github}
+                    rel="noopener noreferrer"
+                    target="_blank"
                   >
                     <FaGithub size={40} />
                   </a>

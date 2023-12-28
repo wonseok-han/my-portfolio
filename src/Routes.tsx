@@ -10,10 +10,10 @@ const Routes: React.FC = () => {
 
   return (
     <GetRoutes location={location}>
-      <Route path="/" element={<Home />} />
-      <Route path="/career" element={<Career />} />
-      <Route path="/portfolio" element={<Portfolio />} />
-      <Route path="*" element={<NotFound />} />
+      <Route element={<Home />} path="/" />
+      <Route element={<Career />} path="/career" />
+      <Route element={<Portfolio />} path="/portfolio" />
+      <Route element={<NotFound />} path="*" />
     </GetRoutes>
   );
 };

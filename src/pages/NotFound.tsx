@@ -1,7 +1,7 @@
 const NotFound = () => {
   return (
     <div className="min-h-screen bg-gray-100">
-      <div className="mx-auto max-w-full py-16 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-full px-4 py-16 sm:px-6 lg:px-8">
         <div className="font-sans text-4xl font-extrabold text-gray-900">
           404 - Page Not Found
         </div>

@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div className="h-full bg-gray-100">
       <div
-        className="mx-auto max-w-full py-16 px-4 sm:px-6 lg:px-8"
+        className="mx-auto max-w-full px-4 py-16 sm:px-6 lg:px-8"
         data-aos="fade-up"
         data-aos-duration="1500"
       >
@@ -29,7 +29,7 @@ const Home = () => {
                     <div className="font-sans text-lg font-extrabold text-gray-900">
                       {userDataKeyName[key]}
                     </div>
-                    <hr className="mt-2 mb-4" />
+                    <hr className="mb-4 mt-2" />
                     <div className="text-gray-900">{userData[key]}</div>
                   </div>
                 </div>
@@ -53,14 +53,14 @@ const Home = () => {
                     <div className="font-sans text-lg font-extrabold text-gray-900">
                       {skillDataKeyName[key]}
                     </div>
-                    <hr className="mt-2 mb-4" />
+                    <hr className="mb-4 mt-2" />
                     <div className="grid grid-cols-2">
                       {skillData[key].map((skill: string, index) => (
                         <div key={`${skill}-${index}`} className="relative">
                           <img
-                            src={`${process.env.PUBLIC_URL}/${skill}`}
                             alt={`${skill}-${index}`}
                             className="w-full rounded-t-md object-scale-down"
+                            src={`${process.env.PUBLIC_URL}/${skill}`}
                             style={{ height: 150 }}
                           />
                         </div>

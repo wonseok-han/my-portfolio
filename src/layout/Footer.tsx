@@ -14,8 +14,8 @@ export default function Footer() {
       <p>© 2023 wonseok-han&apos;s Page</p>
       <a
         href={`https://github.com/wonseok-han`}
-        target="_blank"
         rel="noopener noreferrer"
+        target="_blank"
       >
         <FaGithub size={25} />
       </a>

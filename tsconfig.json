@@ -98,10 +98,11 @@
   "include": [
     "src"
   ],
+  "exclude": [
+    "node_modules",
+    "public"
+  ],
   /**
    * Specifies an array of filenames or patterns that should be skipped when resolving include.
    */
-  "exclude": [
-    "node_modules"
-  ]
 }
