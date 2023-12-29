@@ -164,15 +164,31 @@ export const careerData = [
     key: '2',
     name: '(주)이노그리드',
     term: '2023. 08 ~ ',
-    works: ['프로젝트 프론트엔드 개발'],
+    works: ['Web3개발팀 프론트엔드 개발'],
     projects: [
       {
         key: '1',
-        name: '하이퍼스퀘어 블록체인',
+        name: 'LG CoE 가전 NFT 관리 PoC DApp 개발',
         term: '2023. 08. ~ ',
-        roles: ['블록체인 프론트엔드 개발'],
-        skills: ['React'],
-        intro: '',
+        roles: [
+          '사용자 페이지 프론트엔드 개발',
+          '관리자 페이지 프론트엔드 개발',
+        ],
+        skills: ['Typescript', 'React', 'Vite'],
+        intro:
+          'LG ThinQ 앱과 Wallypto 앱의 지갑을 연동해 사용자들의 가전에 대한 정보를 NFT 발행하고, 이력을 관리할 수 있도록 하는 DApp',
+      },
+      {
+        key: '2',
+        name: 'LG CoE 반응형 Portal 사이트 개발',
+        term: '2023. 11. ~ ',
+        roles: [
+          '사용자 페이지 프론트엔드 개발',
+          '관리자 페이지 프론트엔드 개발',
+        ],
+        skills: ['Typescript', 'React', 'Vite'],
+        intro:
+          '브랜드별 NFT 컬렉션, 이벤트, 뉴스 등을 정리하고, 보유 중인 NFT에 관련된 컨텐츠를 확인할 수 있는 Portal 사이트',
       },
     ],
   },
