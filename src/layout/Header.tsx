@@ -98,21 +98,21 @@ export default function Header({ toggleDarkMode }: HeaderProps) {
               to="/"
               onClick={handleMenuButtonClick}
             >
-              Home
+              <p className="font-sans">Home</p>
             </Link>
             <Link
               className="my-4 text-lg font-extrabold hover:text-blue-400 hover:underline"
               to="/career"
               onClick={handleMenuButtonClick}
             >
-              Career
+              <p className="font-sans">Career</p>
             </Link>
             <Link
               className="my-4 text-lg font-extrabold hover:text-blue-400 hover:underline"
               to="/portfolio"
               onClick={handleMenuButtonClick}
             >
-              Projects
+              <p className="font-sans">Projects</p>
             </Link>
             <button
               className="my-4 flex h-8 w-8 items-center justify-center rounded-full border-2 border-gray-400 focus:border-blue-500 focus:outline-none"
