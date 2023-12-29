@@ -8,6 +8,7 @@ import {
 } from 'react-query';
 import { BrowserRouter as Router } from 'react-router-dom';
 
+import FloatingUpButton from 'components/FloatingUpButton';
 import ScrollToTop from 'components/ScrollToTop';
 import { ThemeContext } from 'contexts/ThemeContext';
 import Content from 'layout/Content';
@@ -61,6 +62,7 @@ const App: React.FC = () => {
                   >
                     <ScrollToTop />
                     <MyRoutes />
+                    <FloatingUpButton />
                   </ErrorBoundary>
                 )}
               </QueryErrorResetBoundary>
