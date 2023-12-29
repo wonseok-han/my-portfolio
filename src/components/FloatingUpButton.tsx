@@ -5,7 +5,7 @@ const FloatingUpButton = () => {
 
   return (
     <button
-      className={`fixed bottom-16 right-12 rounded-full bg-gray-800 p-3 text-white`}
+      className={`fixed bottom-16 right-12 rounded-full bg-gray-800 p-3 text-white hover:text-blue-400`}
       onClick={handleClick}
     >
       <svg
