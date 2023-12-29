@@ -8,6 +8,7 @@ import {
 } from 'react-query';
 import { BrowserRouter as Router } from 'react-router-dom';
 
+import ScrollToTop from 'components/ScrollToTop';
 import { ThemeContext } from 'contexts/ThemeContext';
 import Content from 'layout/Content';
 import Footer from 'layout/Footer';
@@ -58,6 +59,7 @@ const App: React.FC = () => {
                     )}
                     onReset={reset}
                   >
+                    <ScrollToTop />
                     <MyRoutes />
                   </ErrorBoundary>
                 )}
