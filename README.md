@@ -51,3 +51,24 @@ REACT_APP_API_BASE_URL="API Base URL"
 REACT_APP_API_POSTFIX="API URL Postfix"
 REACT_APP_MSW="MSW Switch"
 ```
+
+## Source 디렉토리 구조
+
+```bash
+.
+├── public # Public Folder
+│   └── assets
+│       ├── projects
+│       └── skills
+└── src
+    ├── api # API
+    ├── components # Common Components
+    ├── config # Project Config
+    ├── contexts # Context
+    ├── layout # Layout Components
+    ├── lib # Function Libraries
+    ├── mocks # Json Data
+    │   └── data
+    ├── pages # Page Components
+    └── types # Typescript Types
+```
