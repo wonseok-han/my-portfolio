@@ -174,7 +174,7 @@ export const careerData = [
           '사용자 페이지 프론트엔드 개발',
           '관리자 페이지 프론트엔드 개발',
         ],
-        skills: ['Typescript', 'React', 'Vite'],
+        skills: ['Typescript', 'React', 'Vite', 'React-Query', 'Redux-toolkit'],
         intro:
           'LG ThinQ 앱과 Wallypto 앱의 지갑을 연동해 사용자들의 가전에 대한 정보를 NFT 발행하고, 이력을 관리할 수 있도록 하는 DApp',
       },
@@ -186,7 +186,7 @@ export const careerData = [
           '사용자 페이지 프론트엔드 개발',
           '관리자 페이지 프론트엔드 개발',
         ],
-        skills: ['Typescript', 'React', 'Vite'],
+        skills: ['Typescript', 'React', 'Vite', 'React-Query', 'Redux-toolkit'],
         intro:
           '브랜드별 NFT 컬렉션, 이벤트, 뉴스 등을 정리하고, 보유 중인 NFT에 관련된 컨텐츠를 확인할 수 있는 Portal 사이트',
       },
