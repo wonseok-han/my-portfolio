@@ -33,7 +33,7 @@ const Project = () => {
           {data?.map((item: SideProjectProps, index) => (
             <div
               key={item.key}
-              data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'}
+              data-aos={index % 2 === 0 ? 'zoom-in-right' : 'zoom-in-left'}
               data-aos-duration="1000"
             >
               <div

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { FiMoon, FiSun, FiMenu } from 'react-icons/fi';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 
 import { useTheme } from 'contexts/ThemeContext';
 
@@ -33,20 +33,34 @@ export default function Header({ toggleDarkMode }: HeaderProps) {
         </Link>
         <div className="hidden items-center space-x-4 md:flex">
           <Link
-            className="text-lg font-extrabold hover:text-blue-400 hover:underline"
-            to="/"
+            className="cursor-pointer text-lg font-extrabold hover:text-blue-400 hover:underline"
+            duration={500}
+            smooth={true}
+            to="aboutme"
           >
-            <p className="font-sans">Home</p>
+            <p className="font-sans">AboutMe</p>
           </Link>
           <Link
-            className="text-lg font-extrabold hover:text-blue-400 hover:underline"
-            to="/career"
+            className="cursor-pointer text-lg font-extrabold hover:text-blue-400 hover:underline"
+            duration={500}
+            smooth={true}
+            to="skills"
+          >
+            <p className="font-sans">Skills</p>
+          </Link>
+          <Link
+            className="cursor-pointer text-lg font-extrabold hover:text-blue-400 hover:underline"
+            duration={500}
+            smooth={true}
+            to="career"
           >
             <p className="font-sans">Career</p>
           </Link>
           <Link
-            className="text-lg font-extrabold hover:text-blue-400 hover:underline"
-            to="/portfolio"
+            className="cursor-pointer text-lg font-extrabold hover:text-blue-400 hover:underline"
+            duration={500}
+            smooth={true}
+            to="projects"
           >
             <p className="font-sans">Projects</p>
           </Link>
@@ -95,21 +109,36 @@ export default function Header({ toggleDarkMode }: HeaderProps) {
           <div className="flex flex-col items-center">
             <Link
               className="my-4 text-lg font-extrabold hover:text-blue-400 hover:underline"
-              to="/"
+              duration={500}
+              smooth={true}
+              to="aboutme"
               onClick={handleMenuButtonClick}
             >
-              <p className="font-sans">Home</p>
+              <p className="font-sans">AboutMe</p>
             </Link>
             <Link
               className="my-4 text-lg font-extrabold hover:text-blue-400 hover:underline"
-              to="/career"
+              duration={500}
+              smooth={true}
+              to="skills"
+              onClick={handleMenuButtonClick}
+            >
+              <p className="font-sans">Skills</p>
+            </Link>
+            <Link
+              className="my-4 text-lg font-extrabold hover:text-blue-400 hover:underline"
+              duration={500}
+              smooth={true}
+              to="career"
               onClick={handleMenuButtonClick}
             >
               <p className="font-sans">Career</p>
             </Link>
             <Link
               className="my-4 text-lg font-extrabold hover:text-blue-400 hover:underline"
-              to="/portfolio"
+              duration={500}
+              smooth={true}
+              to="projects"
               onClick={handleMenuButtonClick}
             >
               <p className="font-sans">Projects</p>
