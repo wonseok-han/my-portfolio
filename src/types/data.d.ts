@@ -31,6 +31,7 @@ export interface CareerProjectProps {
   roles: Array<string>;
   skills: Array<string>;
   intro: string;
+  images?: Array<string>;
 }
 export interface CompanyProps {
   key: string;

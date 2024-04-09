@@ -3,6 +3,7 @@ import { FaGithub } from 'react-icons/fa';
 import { useQuery } from 'react-query';
 
 import { apis } from 'api';
+import LazyImage from 'components/LazyImage';
 import { SideProjectProps } from 'types/data';
 
 const Project = () => {
@@ -39,7 +40,7 @@ const Project = () => {
                 className={`rounded-md bg-gray-800 opacity-70 shadow-2xl transition-all hover:scale-105 hover:opacity-100`}
               >
                 <div className="relative">
-                  <img
+                  <LazyImage
                     alt={item.name}
                     className="w-full rounded-t-md object-cover object-top"
                     src={item.image}

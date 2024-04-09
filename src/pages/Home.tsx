@@ -2,6 +2,7 @@ import { startTransition, useEffect } from 'react';
 import { useQueries } from 'react-query';
 
 import { apis } from 'api';
+import LazyImage from 'components/LazyImage';
 import { SkillNameProps, SkillProps, UserProps } from 'types/data';
 
 export const userDataKeyName: UserProps = {
@@ -99,7 +100,7 @@ const Home = () => {
                         {skillData[key].map(
                           (skill: keyof SkillProps, index) => (
                             <div key={`${skill}-${index}`} className="relative">
-                              <img
+                              <LazyImage
                                 alt={`${skill}-${index}`}
                                 className="w-full rounded-t-md object-scale-down"
                                 src={`${process.env.PUBLIC_URL}/${skill}`}

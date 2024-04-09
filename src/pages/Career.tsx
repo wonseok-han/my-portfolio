@@ -1,7 +1,9 @@
-import { startTransition, useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useQuery } from 'react-query';
 
 import { apis } from 'api';
+import ImageDialog from 'components/ImageDialog';
+import LazyImage from 'components/LazyImage';
 import { cls } from 'lib/utils';
 import { CareerProjectProps, CompanyProps } from 'types/data';
 
@@ -16,7 +18,20 @@ const colors = [
   'yellow',
 ];
 
-const Careers = ({ data }: { data: Array<CompanyProps> }) => {
+const Careers = ({
+  data,
+  onImageClick,
+}: {
+  data: Array<CompanyProps>;
+  onImageClick: (image: string) => void;
+}) => {
+  const handleImageClick = useCallback(
+    (image: string) => {
+      onImageClick(image);
+    },
+    [onImageClick]
+  );
+
   return (
     <>
       {data
@@ -102,66 +117,84 @@ const Careers = ({ data }: { data: Array<CompanyProps> }) => {
               </h2>
               <div className="mt-2 flex flex-col space-y-4 sm:mt-0">
                 {company.projects.map((project: CareerProjectProps) => (
-                  <div
-                    key={project.key}
-                    className="w-full text-sm text-gray-600 sm:ml-0 sm:mt-2 lg:ml-2 lg:mt-0"
-                    data-aos="fade-left"
-                    data-aos-duration="1300"
-                  >
-                    <h2 className="text-sm font-bold text-gray-900">
-                      • {project.name}
-                    </h2>
-                    <div className="ml-3 mt-1 flex w-full items-start text-sm text-gray-600">
-                      <label className="flex-none">‣ 소개:</label>
-                      <p className="ml-2 text-sm text-gray-600">
-                        {project.intro}
-                      </p>
-                    </div>
-                    <div className="ml-3 mt-1 flex w-full items-start text-sm text-gray-600">
-                      <label className="flex-none">‣ 기간:</label>
-                      <p className="ml-2 text-sm text-gray-600">
-                        {project.term}
-                      </p>
-                    </div>
-                    <div className="ml-3 mt-1 flex items-start text-sm text-gray-600">
-                      <label className="flex-none">‣ 업무:</label>
-                      <div className="ml-2 grid grid-cols-1 space-y-1">
-                        {project.roles && project.roles.length > 0
-                          ? project.roles.map((role, index) => (
-                              <p
-                                key={`${index}-${role}`}
-                                className="text-sm text-gray-600"
-                              >
-                                - {role}
-                              </p>
-                            ))
-                          : null}
+                  <div key={project.key} className="grid grid-rows-1">
+                    <div
+                      className="w-full text-sm text-gray-600 sm:ml-0 sm:mt-2 lg:ml-2 lg:mt-0"
+                      data-aos="fade-left"
+                      data-aos-duration="1300"
+                    >
+                      <h2 className="text-sm font-bold text-gray-900">
+                        • {project.name}
+                      </h2>
+                      <div className="ml-3 mt-1 flex w-full items-start text-sm text-gray-600">
+                        <label className="flex-none">‣ 소개:</label>
+                        <p className="ml-2 text-sm text-gray-600">
+                          {project.intro}
+                        </p>
                       </div>
-                    </div>
-                    <div className="ml-3 mt-1 flex items-start text-sm text-gray-600 sm:items-center">
-                      <label className="flex-none">‣ 기술:</label>
-                      <div className="ml-2 grid grid-cols-1 space-y-1 sm:flex sm:flex-row sm:space-x-1 sm:space-y-0">
-                        {project.skills.map((skill, index) => {
-                          const randomColor =
-                            colors[Math.floor(Math.random() * colors.length)];
-                          const bgColor = `bg-${randomColor}-300`;
-                          const borderColor = `border-${randomColor}-500`;
+                      <div className="ml-3 mt-1 flex w-full items-start text-sm text-gray-600">
+                        <label className="flex-none">‣ 기간:</label>
+                        <p className="ml-2 text-sm text-gray-600">
+                          {project.term}
+                        </p>
+                      </div>
+                      <div className="ml-3 mt-1 flex items-start text-sm text-gray-600">
+                        <label className="flex-none">‣ 업무:</label>
+                        <div className="ml-2 grid grid-cols-1 space-y-1">
+                          {project.roles && project.roles.length > 0
+                            ? project.roles.map((role, index) => (
+                                <p
+                                  key={`${index}-${role}`}
+                                  className="text-sm text-gray-600"
+                                >
+                                  - {role}
+                                </p>
+                              ))
+                            : null}
+                        </div>
+                      </div>
+                      <div className="ml-3 mt-1 flex items-start text-sm text-gray-600 sm:items-center">
+                        <label className="flex-none">‣ 기술:</label>
+                        <div className="ml-2 grid grid-cols-1 space-y-1 sm:flex sm:flex-row sm:space-x-1 sm:space-y-0">
+                          {project.skills.map((skill, index) => {
+                            const randomColor =
+                              colors[Math.floor(Math.random() * colors.length)];
+                            const bgColor = `bg-${randomColor}-300`;
+                            const borderColor = `border-${randomColor}-500`;
 
-                          return (
-                            <div
-                              key={`${index}-${skill}`}
-                              className={cls(
-                                `${bgColor} ${borderColor} rounded border`
-                              )}
-                            >
-                              <p className="p-1 text-xs text-gray-600">
-                                {skill}
-                              </p>
-                            </div>
-                          );
-                        })}
+                            return (
+                              <div
+                                key={`${index}-${skill}`}
+                                className={cls(
+                                  `${bgColor} ${borderColor} rounded border`
+                                )}
+                              >
+                                <p className="p-1 text-xs text-gray-600">
+                                  {skill}
+                                </p>
+                              </div>
+                            );
+                          })}
+                        </div>
                       </div>
                     </div>
+                    {(project.images || []).length > 0 && (
+                      <div
+                        className="m-2 max-h-96 p-2"
+                        data-aos="fade-left"
+                        data-aos-duration="1300"
+                      >
+                        {project.images?.map((image) => (
+                          <LazyImage
+                            key={image}
+                            alt={project.name}
+                            className="h-full w-auto "
+                            src={image}
+                            onClick={() => handleImageClick(image)}
+                          />
+                        ))}
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
@@ -173,15 +206,26 @@ const Careers = ({ data }: { data: Array<CompanyProps> }) => {
 };
 
 const Career = () => {
+  const [selectedImage, setSelectedImage] = useState('');
+
   const { data, refetch } = useQuery({
     queryKey: ['careers'],
     queryFn: apis.getCareers,
   });
 
+  const handleImageClick = useCallback(
+    (image: string) => {
+      setSelectedImage(image);
+    },
+    [setSelectedImage]
+  );
+
+  const handleClose = useCallback(() => {
+    setSelectedImage('');
+  }, [setSelectedImage]);
+
   useEffect(() => {
-    startTransition(() => {
-      refetch();
-    });
+    refetch();
   }, []);
 
   return (
@@ -192,7 +236,13 @@ const Career = () => {
         </div>
         <hr className="mt-2 h-1 bg-gray-700" />
 
-        <Careers data={data} />
+        <Careers data={data} onImageClick={handleImageClick} />
+
+        <ImageDialog
+          open={selectedImage ? true : false}
+          src={selectedImage}
+          onClose={handleClose}
+        />
       </div>
     </div>
   );
