@@ -56,7 +56,7 @@ const Careers = ({
               <h2 className="text-lg font-bold text-gray-900">
                 <div
                   className="flex items-center"
-                  data-aos="fade-right"
+                  data-aos="zoom-in-right"
                   data-aos-duration="1300"
                 >
                   <svg
@@ -78,7 +78,7 @@ const Careers = ({
               </h2>
               <div
                 className="mt-2 flex flex-col space-y-2 sm:mt-0"
-                data-aos="fade-right"
+                data-aos="zoom-in-right"
                 data-aos-duration="1300"
               >
                 {company.works.map((work: string, index) => (
@@ -95,7 +95,7 @@ const Careers = ({
               <h2 className="text-lg font-bold text-gray-900">
                 <div
                   className="flex items-center"
-                  data-aos="fade-left"
+                  data-aos="zoom-in-left"
                   data-aos-duration="1300"
                 >
                   <svg
@@ -120,7 +120,7 @@ const Careers = ({
                   <div key={project.key} className="grid grid-rows-1">
                     <div
                       className="w-full text-sm text-gray-600 sm:ml-0 sm:mt-2 lg:ml-2 lg:mt-0"
-                      data-aos="fade-left"
+                      data-aos="zoom-in-left"
                       data-aos-duration="1300"
                     >
                       <h2 className="text-sm font-bold text-gray-900">
@@ -181,7 +181,7 @@ const Careers = ({
                     {(project.images || []).length > 0 && (
                       <div
                         className="m-2 max-h-96 p-2"
-                        data-aos="fade-left"
+                        data-aos="zoom-out-down"
                         data-aos-duration="1300"
                       >
                         {project.images?.map((image) => (
