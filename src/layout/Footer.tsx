@@ -11,7 +11,7 @@ export default function Footer() {
     <footer
       className={`fixed inset-x-0 bottom-0 h-12 ${bgColor} ${textColor} flex items-center justify-center gap-5 shadow-inner`}
     >
-      <p>© 2023 wonseok-han&apos;s Page</p>
+      <p>© {new Date().getFullYear()} wonseok-han&apos;s Page</p>
       <a
         href={`https://github.com/wonseok-han`}
         rel="noopener noreferrer"
