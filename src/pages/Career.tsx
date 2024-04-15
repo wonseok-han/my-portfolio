@@ -73,7 +73,7 @@ const Careers = ({
                       strokeLinejoin="round"
                     />
                   </svg>
-                  <label>담당업무</label>
+                  <label className="w-20">담당업무</label>
                 </div>
               </h2>
               <div
@@ -112,12 +112,12 @@ const Careers = ({
                       strokeLinejoin="round"
                     />
                   </svg>
-                  <label>프로젝트</label>
+                  <label className="w-20">프로젝트</label>
                 </div>
               </h2>
-              <div className="mt-2 flex flex-col space-y-4 sm:mt-0">
+              <div className="mt-2 grid grid-cols-1 space-y-2 sm:mt-0 lg:flex lg:flex-col">
                 {company.projects.map((project: CareerProjectProps) => (
-                  <div key={project.key} className="grid grid-rows-1">
+                  <div key={project.key} className="grid grid-cols-1">
                     <div
                       className="w-full text-sm text-gray-600 sm:ml-0 sm:mt-2 lg:ml-2 lg:mt-0"
                       data-aos="zoom-in-left"
@@ -180,7 +180,7 @@ const Careers = ({
                     </div>
                     {(project.images || []).length > 0 && (
                       <div
-                        className="m-2 max-h-96 p-2"
+                        className="m-2 grid gap-2 p-2 lg:flex lg:max-h-96"
                         data-aos="zoom-out-down"
                         data-aos-duration="1300"
                       >
@@ -188,7 +188,7 @@ const Careers = ({
                           <LazyImage
                             key={image}
                             alt={project.name}
-                            className="h-full w-auto "
+                            className="w-auto lg:max-h-80"
                             src={image}
                             onClick={() => handleImageClick(image)}
                           />

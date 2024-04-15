@@ -217,7 +217,10 @@ export const careerData = [
         ],
         intro:
           'LG ThinQ 앱과 Wallypto 앱의 지갑을 연동해 사용자들의 가전에 대한 정보를 NFT 발행하고, 이력을 관리할 수 있도록 하는 DApp',
-        images: ['assets/career/innogrid/innogrid-lge4.png'],
+        images: [
+          'assets/career/innogrid/innogrid-lge4-user.png',
+          'assets/career/innogrid/innogrid-lge4-admin.png',
+        ],
       },
       {
         key: '2',
@@ -240,7 +243,10 @@ export const careerData = [
         ],
         intro:
           '브랜드별 NFT 컬렉션, 이벤트, 뉴스 등을 정리하고, 보유 중인 NFT에 관련된 컨텐츠를 확인할 수 있는 Portal 사이트',
-        images: ['assets/career/innogrid/innogrid-lge1.png'],
+        images: [
+          'assets/career/innogrid/innogrid-lge1-user.png',
+          'assets/career/innogrid/innogrid-lge1-admin.png',
+        ],
       },
     ],
   },
