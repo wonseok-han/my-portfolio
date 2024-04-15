@@ -49,7 +49,9 @@ const AboutMe = () => {
                         {userDataKeyName[key]}
                       </div>
                       <hr className="mb-4 mt-2" />
-                      <div className="text-gray-900">{userData[key]}</div>
+                      <div className="min-h-7 text-gray-900">
+                        {userData[key]}
+                      </div>
                     </div>
                   </div>
                 </div>
