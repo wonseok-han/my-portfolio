@@ -198,12 +198,12 @@ export const careerData = [
     projects: [
       {
         key: '1',
-        name: 'LG CoE 가전 NFT 관리 PoC DApp 개발',
+        name: '(주)A사 가전 NFT 관리 PoC DApp 개발',
         term: '2023. 08. ~ ',
         roles: [
           '코드 컨벤션 및 표준화 작업, 환경 구성',
           '공통 컴포넌트 및 기능 개발',
-          '사용자가 Wallypto 앱을 통해 지갑을 연동하고 보유한 가전에 대해 NFT를 발행하고 관리할 수 있는 프론트 페이지 개발',
+          '사용자가 지갑 앱을 통해 지갑을 연동하고 보유한 가전에 대해 NFT를 발행하고 관리할 수 있는 프론트 페이지 개발',
           '배너, 이벤트, 공지 등을 관리할 수 있는 관리자 프론트 페이지 개발',
           '개발/스테이징 환경 배포',
         ],
@@ -216,15 +216,11 @@ export const careerData = [
           'GitLab',
         ],
         intro:
-          'LG ThinQ 앱과 Wallypto 앱의 지갑을 연동해 사용자들의 가전에 대한 정보를 NFT 발행하고, 이력을 관리할 수 있도록 하는 DApp',
-        images: [
-          'assets/career/innogrid/innogrid-lge4-user.png',
-          'assets/career/innogrid/innogrid-lge4-admin.png',
-        ],
+          '가전 앱과 지갑 앱의 지갑을 연동해 사용자들의 가전에 대한 정보를 NFT 발행하고, 이력을 관리할 수 있도록 하는 DApp',
       },
       {
         key: '2',
-        name: 'LG CoE 반응형 Portal 사이트 개발',
+        name: '(주)A사 반응형 Portal 사이트 개발',
         term: '2023. 11. ~ ',
         roles: [
           '코드 컨벤션 및 표준화 작업, 환경 구성',
@@ -243,10 +239,6 @@ export const careerData = [
         ],
         intro:
           '브랜드별 NFT 컬렉션, 이벤트, 뉴스 등을 정리하고, 보유 중인 NFT에 관련된 컨텐츠를 확인할 수 있는 Portal 사이트',
-        images: [
-          'assets/career/innogrid/innogrid-lge1-user.png',
-          'assets/career/innogrid/innogrid-lge1-admin.png',
-        ],
       },
     ],
   },
