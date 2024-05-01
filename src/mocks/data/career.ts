@@ -73,6 +73,7 @@ export const careerData = [
           '시스템 관리자 공통(공통코드, 메뉴, 권한 등) 프론트 페이지 개발',
           '시스템 관리자 공통(공통코드, 메뉴, 권한 등) 백엔드 API 개발',
           '비즈니스 업무 화면 개발자에 대한 기술 지원',
+          'Gitlab-CI를 이용한 배포 자동화 구축',
         ],
         skills: ['React', 'Django', 'MsSql', 'GitLab'],
         intro: '부산대학교 교육정보시스템 Legacy를 리뉴얼하는 프로젝트',
@@ -97,6 +98,7 @@ export const careerData = [
           '백엔드를 Django로, 프론트엔드를 React로 구성하는 아키텍처를 구성',
           '고객으로부터 요구된 샘플 화면 프론트 페이지 개발',
           '고객으로부터 요구된 샘플 화면 백엔드 API 개발',
+          'Gitlab-CI를 이용한 배포 자동화 구축',
         ],
         skills: ['React', 'Django', 'MySQL', 'GitLab'],
         intro:

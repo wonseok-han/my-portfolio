@@ -2,7 +2,7 @@ export const projectData = [
   {
     key: '1',
     name: 'Portfolio',
-    skills: 'Typescript, React, Tailwind',
+    skills: 'Typescript, React, Tailwind, MSW, react-query',
     url: 'https://wonseok-han.dev/',
     image: 'assets/projects/my-portfolio.png',
     github: 'https://github.com/wonseok-han/my-portfolio',
