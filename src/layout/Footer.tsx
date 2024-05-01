@@ -9,9 +9,9 @@ export default function Footer() {
 
   return (
     <footer
-      className={`fixed inset-x-0 bottom-0 h-12 ${bgColor} ${textColor} flex items-center justify-center gap-5 shadow-inner`}
+      className={`flex h-20 items-center justify-center gap-5 shadow-inner ${bgColor} ${textColor}`}
     >
-      <p>© {new Date().getFullYear()} wonseok-han&apos;s Page</p>
+      <p>&copy; {new Date().getFullYear()} wonseok-han&apos;s Page</p>
       <a
         href={`https://github.com/wonseok-han`}
         rel="noopener noreferrer"
