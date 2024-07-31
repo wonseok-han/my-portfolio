@@ -48,6 +48,10 @@ export const careerData = [
         skills: ['React', 'SpringBoot', 'Flex', 'Spring', 'Oracle', 'MobX'],
         intro:
           'Flex로 개발된 항만 컨테이너 터미널 운영시스템 Legacy를 유지보수하면서 React, Springboot로 리뉴얼하는 프로젝트',
+        detail: [
+          'useInput 커스텀 훅을 이용한 Form 입력 관리 최적화',
+          'Context를 이용해 각 페이지별 상태값을 관리할 수 있도록 표준 개발',
+        ],
       },
       {
         key: '10',
@@ -56,12 +60,14 @@ export const careerData = [
         roles: [
           '수질/자산 업무 화면 프론트 페이지 개발',
           '수질/자산 업무 화면 백엔드 API 개발',
-          'Legacy 시스템에서 잘못 작성된 프로시저를 개선해 성능 및 잘못된 데이터가 표출 되는 이슈 개선',
           '운영 환경에서의 이슈 대응 및 보수',
         ],
         skills: ['Websquare', 'eGovFramework', 'Oracle', 'Crownix Report'],
         intro:
           '부산 상수도사업본부에서 사용하는 경영지원정보시스템 Legacy를 리뉴얼하는 프로젝트',
+        detail: [
+          'Legacy 시스템에서 잘못 작성된 프로시저를 개선해 성능 및 잘못된 데이터가 표출 되는 이슈 개선',
+        ],
       },
       {
         key: '9',
@@ -77,6 +83,13 @@ export const careerData = [
         ],
         skills: ['React', 'Django', 'MsSql', 'GitLab'],
         intro: '부산대학교 교육정보시스템 Legacy를 리뉴얼하는 프로젝트',
+        detail: [
+          '미들웨어에서 Model, Serializer를 이용해 페이지를 구성하는 메타정보를 만들어주는 기능 개발',
+          'AUIGrid 라이브러리를 이용한 공통 그리드 컴포넌트 개발',
+          'Context를 이용해 페이지 상태값을 저장함으로써 화면이 MDI 구조를 가질 수 있도록 개발',
+          'AWS EC2 인스턴스에 설치형 GitLab을 설치하고 Gitlab-CI를 사용할 수 있는 환경 구성',
+          'Docker Portainer를 설정하고 오케스트레이션할 수 있는 환경 구성',
+        ],
       },
       {
         key: '8',
@@ -103,6 +116,10 @@ export const careerData = [
         skills: ['React', 'Django', 'MySQL', 'GitLab'],
         intro:
           '부산대학교 교육정보시스템 Legacy를 리뉴얼하기 위한 파일럿 프로젝트',
+        detail: [
+          'AWS EC2 인스턴스에 설치형 GitLab을 설치하고 Gitlab-CI를 사용할 수 있는 환경 구성',
+          'Docker Portainer를 설정하고 오케스트레이션할 수 있는 환경 구성',
+        ],
       },
       {
         key: '6',
@@ -194,41 +211,52 @@ export const careerData = [
     works: [
       'Web3개발팀 선임연구원 프론트엔드 팀원',
       '프론트엔드 개발 코드 표준 구성 및 환경 구성',
-      '프론트엔드 기술 지원',
-      '백엔드 API 개발 지원',
+      '프론트엔드 개발 및 기술 지원',
     ],
     projects: [
       {
-        key: '1',
-        name: '(주)A사 가전 NFT 관리 PoC DApp 개발',
-        term: '2023. 08. ~ ',
+        key: '2',
+        name: '(주)A사 Web3 Survey Admin PoC 사이트 재개발',
+        term: '2024. 04. ~ 2024. 07. (4개월)',
         roles: [
+          '상태값을 관리하는 체계, 불규칙한 API 호출 방식, 일관성 없는 코드 규칙 및 타입스크립트 적용 미흡 등의 이유로 인해 재개발 진행',
           '코드 컨벤션 및 표준화 작업, 환경 구성',
           '공통 컴포넌트 및 기능 개발',
-          '사용자가 지갑 앱을 통해 지갑을 연동하고 보유한 가전에 대해 NFT를 발행하고 관리할 수 있는 프론트 페이지 개발',
-          '배너, 이벤트, 공지 등을 관리할 수 있는 관리자 프론트 페이지 개발',
-          '개발/스테이징 환경 배포',
+          '로그인, 배너, 이벤트, 공지, 설문 등을 관리할 수 있는 관리자 프론트 개발',
+          '지갑 연결 및 트랜잭션 처리',
+          '기술 지원 및 개발/스테이징 환경 배포',
         ],
         skills: [
           'Typescript',
           'React',
           'Vite',
-          'react-query',
+          'React-Query',
           'Redux-toolkit',
           'GitLab',
+          'WalletConnect',
         ],
         intro:
-          '가전 앱과 지갑 앱의 지갑을 연동해 사용자들의 가전에 대한 정보를 NFT 발행하고, 이력을 관리할 수 있도록 하는 DApp',
+          '사용자가 참여할 설문(객관식, 주관식, 파일첨부 등의 항목 타입)을 등록하고 사용자 페이지에 노출되는 공지, FAQ 등을 관리할 수 있는 관리자 사이트',
+        detail: [
+          '동적 페이지 라우팅을 적용해 pages 폴더 하위의 컴포넌트가 페이지로 라우팅되도록 기능 개발',
+          '이메일 인증 또는 WalletConnect EthereumProvider 라이브러리를 이용한 지갑연결을 통해 로그인하는 기능 개발',
+          'Web Worker를 활용한 인증시간 타이머 기능 개발',
+          'SunEditor 라이브러리를 이용한 웹에디터 기능 개발',
+          '설문을 등록할 때 연결된 지갑으로의 send transaction 서명을 통해 등록하는 기능 개발',
+          '생성된 설문에 대한 미리보기 PDF Export 기능 개발',
+          '시스템 로그 엑셀 Export 기능 개발',
+        ],
       },
       {
-        key: '2',
-        name: '(주)A사 반응형 Portal 사이트 개발',
-        term: '2023. 11. ~ ',
+        key: '1',
+        name: '(주)A사 반응형 Portal PoC 사용자/관리자 사이트 개발',
+        term: '2023. 11. ~ 2024. 01. (3개월)',
         roles: [
           '코드 컨벤션 및 표준화 작업, 환경 구성',
           '공통 컴포넌트 및 기능 개발',
-          '사용자가 보는 메인, 브랜드, 이벤트, 뉴스 프론트 페이지 개발',
-          '배너, 이벤트, 공지, 컬렉션 등을 관리할 수 있는 관리자 프론트 페이지 로그인, 브랜드 페이지 개발',
+          '프론트엔드 개발 지원',
+          '사용자가 보는 메인, 브랜드, 이벤트, 뉴스 프론트 페이지 미완성 부분 개발',
+          '관리자 프론트 페이지 로그인, 브랜드 페이지 개발',
           '기술 지원 및 개발/스테이징 환경 배포',
         ],
         skills: [
@@ -241,6 +269,46 @@ export const careerData = [
         ],
         intro:
           '브랜드별 NFT 컬렉션, 이벤트, 뉴스 등을 정리하고, 보유 중인 NFT에 관련된 컨텐츠를 확인할 수 있는 Portal 사이트',
+        detail: [
+          '동적 페이지 라우팅을 적용해 pages 폴더 하위의 컴포넌트가 페이지로 라우팅되도록 기능 개발',
+          '이메일 인증을 통해 로그인하는 기능 개발',
+          'react-hook-form 라이브러리를 이용한 폼 데이터 관리 기능 개발',
+          'SunEditor 라이브러리를 이용한 웹에디터 기능 개발',
+          'Mui AutoComplete 컴포넌트를 활용한 Select/InputFilter 기능 개발',
+        ],
+      },
+      {
+        key: '0',
+        name: '(주)A사 가전 NFT 관리 PoC DApp 사용자/관리자 개발',
+        term: '2023. 08. ~ 2024. 06. (10개월)',
+        roles: [
+          '코드 컨벤션 및 표준화 작업, 환경 구성',
+          '공통 컴포넌트 및 기능 개발',
+          '사용자가 지갑 앱을 통해 지갑을 연동하고 보유한 가전에 대해 NFT를 발행하고 관리할 수 있는 프론트 페이지 개발',
+          '배너, 이벤트, 공지 등을 관리할 수 있는 관리자 프론트 페이지 개발',
+          '지갑 연결 및 트랜잭션 처리',
+          '개발/스테이징 환경 배포',
+        ],
+        skills: [
+          'Typescript',
+          'React',
+          'Vite',
+          'react-query',
+          'Redux-toolkit',
+          'GitLab',
+          'WalletConnect',
+        ],
+        intro:
+          '가전 앱과 지갑 앱의 지갑을 연동해 사용자들의 가전에 대한 정보를 NFT 발행하고, 이력을 관리할 수 있도록 하는 DApp',
+        detail: [
+          '동적 페이지 라우팅을 적용해 pages 폴더 하위의 컴포넌트가 페이지로 라우팅되도록 기능 개발',
+          'AppLink/UniversalLink를 이용해 지갑앱을 호출하고 지갑을 연동하는 기능 개발',
+          'WalletConnect EthereumProvider 라이브러리를 이용해 지갑을 연동하는 기능 개발',
+          '사용자가 send transaction 서명을 통해 NFT 민팅/업데이트/소유권이전 하는 기능 개발',
+          '이메일 인증을 통해 로그인하는 기능 개발',
+          'SunEditor 라이브러리를 이용한 웹에디터 기능 개발',
+          '시스템 로그 엑셀 Export 기능 개발',
+        ],
       },
     ],
   },

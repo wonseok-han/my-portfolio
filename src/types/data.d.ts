@@ -3,7 +3,7 @@ export interface UserProps {
   name: string;
   birthday: string;
   address: string;
-  phone: string;
+  github: string;
   email: string;
   company: string;
 }
@@ -31,6 +31,7 @@ export interface CareerProjectProps {
   roles: Array<string>;
   skills: Array<string>;
   intro: string;
+  detail?: Array<string>;
   images?: Array<string>;
 }
 export interface CompanyProps {

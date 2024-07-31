@@ -9,7 +9,7 @@ export const userDataKeyName: UserProps = {
   birthday: '생년월일',
   address: '주소',
   company: '현직장',
-  phone: '연락처',
+  github: '깃허브',
   email: '이메일',
 };
 
@@ -50,7 +50,17 @@ const AboutMe = () => {
                       </div>
                       <hr className="mb-4 mt-2" />
                       <div className="min-h-7 text-gray-900">
-                        {userData[key]}
+                        {key === 'github' ? (
+                          <a
+                            href={userData[key]}
+                            rel="noreferrer"
+                            target="_blank"
+                          >
+                            {userData[key]}
+                          </a>
+                        ) : (
+                          userData[key]
+                        )}
                       </div>
                     </div>
                   </div>

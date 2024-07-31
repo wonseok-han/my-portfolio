@@ -115,7 +115,7 @@ const Careers = ({
                   <label className="w-20">프로젝트</label>
                 </div>
               </h2>
-              <div className="mt-2 grid grid-cols-1 space-y-2 sm:mt-0 lg:flex lg:flex-col">
+              <div className="mt-2 grid grid-cols-1 gap-4 space-y-2 sm:mt-0 lg:flex lg:flex-col">
                 {company.projects.map((project: CareerProjectProps) => (
                   <div key={project.key} className="grid grid-cols-1">
                     <div
@@ -123,23 +123,27 @@ const Careers = ({
                       data-aos="zoom-in-left"
                       data-aos-duration="1300"
                     >
-                      <h2 className="text-sm font-bold text-gray-900">
-                        • {project.name}
+                      <h2 className="text-base font-bold text-gray-900">
+                        📌 {project.name}
                       </h2>
                       <div className="ml-3 mt-1 flex w-full items-start text-sm text-gray-600">
-                        <label className="flex-none">‣ 소개:</label>
+                        <label className="flex-none">👉</label>
                         <p className="ml-2 text-sm text-gray-600">
                           {project.intro}
                         </p>
                       </div>
                       <div className="ml-3 mt-1 flex w-full items-start text-sm text-gray-600">
-                        <label className="flex-none">‣ 기간:</label>
+                        <label className="flex-none font-semibold">
+                          ‣ 기간:
+                        </label>
                         <p className="ml-2 text-sm text-gray-600">
                           {project.term}
                         </p>
                       </div>
                       <div className="ml-3 mt-1 flex items-start text-sm text-gray-600">
-                        <label className="flex-none">‣ 업무:</label>
+                        <label className="flex-none font-semibold">
+                          ‣ 업무:
+                        </label>
                         <div className="ml-2 grid grid-cols-1 space-y-1">
                           {project.roles && project.roles.length > 0
                             ? project.roles.map((role, index) => (
@@ -147,14 +151,33 @@ const Careers = ({
                                   key={`${index}-${role}`}
                                   className="text-sm text-gray-600"
                                 >
-                                  - {role}
+                                  • {role}
                                 </p>
                               ))
                             : null}
                         </div>
                       </div>
+                      {project?.detail && (
+                        <div className="ml-3 mt-1 flex items-start text-sm text-gray-600">
+                          <label className="flex-none font-semibold">
+                            ‣ 개발:
+                          </label>
+                          <div className="ml-2 grid grid-cols-1 space-y-1">
+                            {project.detail.map((item, index) => (
+                              <span
+                                key={`${index}-${item}`}
+                                className="flex gap-2 text-sm text-gray-600"
+                              >
+                                <p className="text-green-500">✓</p> {item}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                       <div className="ml-3 mt-1 flex items-start text-sm text-gray-600 sm:items-center">
-                        <label className="flex-none">‣ 기술:</label>
+                        <label className="flex-none font-semibold">
+                          ‣ 기술:
+                        </label>
                         <div className="ml-2 grid grid-cols-1 space-y-1 sm:flex sm:flex-row sm:space-x-1 sm:space-y-0">
                           {project.skills.map((skill, index) => {
                             const randomColor =
@@ -166,7 +189,7 @@ const Careers = ({
                               <div
                                 key={`${index}-${skill}`}
                                 className={cls(
-                                  `${bgColor} ${borderColor} rounded border`
+                                  `${bgColor} ${borderColor} rounded font-semibold`
                                 )}
                               >
                                 <p className="p-1 text-xs text-gray-600">
