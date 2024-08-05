@@ -10,6 +10,7 @@ export const skillDataKeyName: SkillNameProps = {
   backend: '백엔드',
   scm: '형상관리',
   database: '데이터베이스',
+  blockchain: 'Web3',
 };
 
 const Skills = () => {
@@ -42,7 +43,7 @@ const Skills = () => {
                   data-aos="flip-left"
                   data-aos-duration={400 * (index + 1)}
                 >
-                  <div className="overflow-hidden rounded-lg bg-white shadow-lg transition-all hover:scale-105">
+                  <div className="h-full overflow-hidden rounded-lg bg-white shadow-lg transition-all hover:scale-105">
                     <div className="px-6 py-4 text-center">
                       <div className="font-sans text-lg font-extrabold text-gray-900">
                         {skillDataKeyName[key]}

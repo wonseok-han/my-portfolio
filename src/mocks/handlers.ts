@@ -4,7 +4,8 @@ import config from 'config';
 
 import { careerData } from './data/career';
 import { projectData } from './data/project';
-import { skillData, userData } from './data/user';
+import { skillData } from './data/skill';
+import { userData } from './data/user';
 
 const sleep = (timeout: number) => {
   return new Promise((resolve) => {
