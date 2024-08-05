@@ -51,7 +51,12 @@ const Project = () => {
                   <h2 className={`text-xl font-bold text-white`}>
                     {item.name}
                   </h2>
-                  <p className="mt-2 text-gray-300">{item.intro}</p>
+                  <div className="mt-2 text-gray-300">
+                    {item?.intro &&
+                      item.intro.map((intro: string) => (
+                        <p key={intro}>{intro}</p>
+                      ))}
+                  </div>
                   <p className="mt-2 text-sm text-gray-300">
                     사용기술: {item.skills}
                   </p>

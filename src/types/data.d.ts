@@ -49,5 +49,5 @@ export interface SideProjectProps {
   url: string;
   image?: string;
   github?: string;
-  intro?: string;
+  intro?: Array<string>;
 }
