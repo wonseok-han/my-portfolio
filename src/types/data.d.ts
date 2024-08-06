@@ -30,7 +30,7 @@ export interface CareerProjectProps {
   term: string;
   roles: Array<string>;
   skills: Array<string>;
-  intro: string;
+  intro: Array<string>;
   detail?: Array<string>;
   images?: Array<string>;
 }

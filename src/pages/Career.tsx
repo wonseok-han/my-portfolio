@@ -43,17 +43,17 @@ const Careers = ({
             data-aos="fade-up"
             data-aos-duration={1300}
           >
-            <div className="flex flex-wrap">
+            <div className="flex items-end gap-2">
               <h2 className="text-xl font-bold text-gray-900">
                 {company.name}
               </h2>
-              <h2 className="text-xl font-bold text-gray-900">
-                ({company.term})
+              <h2 className="text-base font-bold text-gray-500">
+                {company.term}
               </h2>
             </div>
 
             <div className="w-full border-b-[2px] border-t px-4 py-2.5 text-gray-700 sm:grid sm:grid-cols-1 sm:space-x-1 lg:flex lg:space-x-5">
-              <h2 className="text-lg font-bold text-gray-900">
+              <h2 className="text-xl font-bold text-gray-900">
                 <div
                   className="flex items-center"
                   data-aos="zoom-in-right"
@@ -84,15 +84,15 @@ const Careers = ({
                 {company.works.map((work: string, index) => (
                   <p
                     key={`${index}-${work}`}
-                    className="text-sm text-gray-600 sm:ml-0 sm:mt-2 lg:ml-2 lg:mt-0"
+                    className="text-base text-gray-600 sm:ml-0 sm:mt-2 lg:ml-2 lg:mt-0"
                   >
-                    - {work}
+                    • {work}
                   </p>
                 ))}
               </div>
             </div>
             <div className="w-full border-b-[2px] px-4 py-2.5 text-gray-700 sm:grid sm:grid-cols-1 sm:space-x-1 lg:flex lg:space-x-5">
-              <h2 className="text-lg font-bold text-gray-900">
+              <h2 className="text-xl font-bold text-gray-900">
                 <div
                   className="flex items-center"
                   data-aos="zoom-in-left"
@@ -115,7 +115,7 @@ const Careers = ({
                   <label className="w-20">프로젝트</label>
                 </div>
               </h2>
-              <div className="mt-2 grid grid-cols-1 gap-4 space-y-2 sm:mt-0 lg:flex lg:flex-col">
+              <div className="mt-2 grid grid-cols-1 gap-6 space-y-2 sm:mt-0 lg:flex lg:flex-col">
                 {company.projects.map((project: CareerProjectProps) => (
                   <div key={project.key} className="grid grid-cols-1">
                     <div
@@ -123,33 +123,29 @@ const Careers = ({
                       data-aos="zoom-in-left"
                       data-aos-duration="1300"
                     >
-                      <h2 className="text-base font-bold text-gray-900">
-                        📌 {project.name}
-                      </h2>
-                      <div className="ml-3 mt-1 flex w-full items-start text-sm text-gray-600">
-                        <label className="flex-none">👉</label>
-                        <p className="ml-2 text-sm text-gray-600">
-                          {project.intro}
-                        </p>
+                      <div className="flex flex-col justify-center gap-1">
+                        <h2 className="text-lg font-bold text-gray-900">
+                          {project.name}
+                        </h2>
+                        <p className="text-gray-600">{project.term}</p>
                       </div>
-                      <div className="ml-3 mt-1 flex w-full items-start text-sm text-gray-600">
-                        <label className="flex-none font-semibold">
-                          ‣ 기간:
-                        </label>
-                        <p className="ml-2 text-sm text-gray-600">
-                          {project.term}
-                        </p>
+                      <div className="my-4 flex w-full flex-col items-start gap-1 text-base text-gray-600">
+                        {project.intro.map((intro: string) => (
+                          <p key={intro} className="text-base text-gray-600">
+                            {intro}
+                          </p>
+                        ))}
                       </div>
-                      <div className="ml-3 mt-1 flex items-start text-sm text-gray-600">
-                        <label className="flex-none font-semibold">
-                          ‣ 업무:
+                      <div className="ml-3 mt-4 flex flex-col items-start gap-1 text-sm text-gray-600">
+                        <label className="flex-none text-lg font-semibold">
+                          업무
                         </label>
                         <div className="ml-2 grid grid-cols-1 space-y-1">
                           {project.roles && project.roles.length > 0
                             ? project.roles.map((role, index) => (
                                 <p
                                   key={`${index}-${role}`}
-                                  className="text-sm text-gray-600"
+                                  className="text-base text-gray-600"
                                 >
                                   • {role}
                                 </p>
@@ -158,25 +154,25 @@ const Careers = ({
                         </div>
                       </div>
                       {project?.detail && (
-                        <div className="ml-3 mt-1 flex items-start text-sm text-gray-600">
-                          <label className="flex-none font-semibold">
-                            ‣ 개발:
+                        <div className="ml-3 mt-4 flex flex-col items-start gap-1 text-sm text-gray-600">
+                          <label className="flex-none text-lg font-semibold">
+                            개발
                           </label>
                           <div className="ml-2 grid grid-cols-1 space-y-1">
                             {project.detail.map((item, index) => (
-                              <span
+                              <p
                                 key={`${index}-${item}`}
-                                className="flex gap-2 text-sm text-gray-600"
+                                className="text-base text-gray-600"
                               >
-                                <p className="text-green-500">✓</p> {item}
-                              </span>
+                                • {item}
+                              </p>
                             ))}
                           </div>
                         </div>
                       )}
-                      <div className="ml-3 mt-1 flex items-start text-sm text-gray-600 sm:items-center">
-                        <label className="flex-none font-semibold">
-                          ‣ 기술:
+                      <div className="ml-3 mt-4 flex items-start gap-1 text-sm text-gray-600 sm:items-center">
+                        <label className="flex-none text-lg font-semibold">
+                          기술
                         </label>
                         <div className="ml-2 grid grid-cols-1 space-y-1 sm:flex sm:flex-row sm:space-x-1 sm:space-y-0">
                           {project.skills.map((skill, index) => {
