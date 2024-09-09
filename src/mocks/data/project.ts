@@ -6,7 +6,7 @@ export const projectData = [
     url: 'https://wonseok-han.dev/',
     image: 'assets/projects/my-portfolio.png',
     github: 'https://github.com/wonseok-han/my-portfolio',
-    intro: ['원석의 포트폴리오 사이트'],
+    intro: ['나의 포트폴리오 사이트'],
   },
   {
     key: '2',
@@ -40,6 +40,18 @@ export const projectData = [
     intro: [
       'Wagmi에서 제공하는 라이브러리를 이용해 WalletConnect 연동',
       'web3-react를 적용해 지갑을 연동하는 통합 모듈 개인 프로젝트',
+    ],
+  },
+  {
+    key: '5',
+    name: 'My Blog',
+    skills: 'Typescript, Next, React, Tailwind',
+    url: 'https://blog.wonseok-han.dev/',
+    image: 'assets/projects/my-blog.png',
+    github: 'https://github.com/wonseok-han/my-blog',
+    intro: [
+      '나의 블로그',
+      '잊어버릴까봐 기록하는 용도의 MDX로 작성하는 개인 블로그',
     ],
   },
 ];
