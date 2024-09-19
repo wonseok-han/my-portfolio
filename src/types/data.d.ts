@@ -29,9 +29,10 @@ export interface CareerProjectProps {
   name: string;
   term: string;
   roles: Array<string>;
+  man?: Array<string>;
   skills: Array<string>;
   intro: Array<string>;
-  detail?: Array<string>;
+  result?: Array<string>;
   images?: Array<string>;
 }
 export interface CompanyProps {
@@ -39,7 +40,7 @@ export interface CompanyProps {
   name: string;
   term: string;
   works: Array<string>;
-  projects: Array<CareerProject>;
+  projects: Array<CareerProjectProps>;
 }
 
 export interface SideProjectProps {

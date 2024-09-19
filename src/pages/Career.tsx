@@ -136,9 +136,26 @@ const Careers = ({
                           </p>
                         ))}
                       </div>
+                      {project?.man && project.man.length > 0 && (
+                        <div className="ml-3 mt-4 flex flex-col items-start gap-1 text-sm text-gray-600">
+                          <label className="flex-none text-lg font-semibold">
+                            구성 인원
+                          </label>
+                          <div className="ml-2 grid grid-cols-1 space-y-1">
+                            {project.man.map((man, index) => (
+                              <p
+                                key={`${index}-${man}`}
+                                className="text-base text-gray-600"
+                              >
+                                • {man}
+                              </p>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                       <div className="ml-3 mt-4 flex flex-col items-start gap-1 text-sm text-gray-600">
                         <label className="flex-none text-lg font-semibold">
-                          업무
+                          업무/개발
                         </label>
                         <div className="ml-2 grid grid-cols-1 space-y-1">
                           {project.roles && project.roles.length > 0
@@ -153,23 +170,23 @@ const Careers = ({
                             : null}
                         </div>
                       </div>
-                      {project?.detail && (
-                        <div className="ml-3 mt-4 flex flex-col items-start gap-1 text-sm text-gray-600">
-                          <label className="flex-none text-lg font-semibold">
-                            개발
-                          </label>
-                          <div className="ml-2 grid grid-cols-1 space-y-1">
-                            {project.detail.map((item, index) => (
-                              <p
-                                key={`${index}-${item}`}
-                                className="text-base text-gray-600"
-                              >
-                                • {item}
-                              </p>
-                            ))}
-                          </div>
+                      <div className="ml-3 mt-4 flex flex-col items-start gap-1 text-sm text-gray-600">
+                        <label className="flex-none text-lg font-semibold">
+                          성과/결과
+                        </label>
+                        <div className="ml-2 grid grid-cols-1 space-y-1">
+                          {project?.result && project.result.length > 0
+                            ? project.result.map((result, index) => (
+                                <p
+                                  key={`${index}-${result}`}
+                                  className="text-base text-gray-600"
+                                >
+                                  • {result}
+                                </p>
+                              ))
+                            : null}
                         </div>
-                      )}
+                      </div>
                       <div className="ml-3 mt-4 flex items-start gap-1 text-sm text-gray-600 sm:items-center">
                         <label className="flex-none text-lg font-semibold">
                           기술

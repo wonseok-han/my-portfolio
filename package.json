@@ -48,7 +48,7 @@
     "prettier": "npx prettier -w ./src/**/*.\"(js|jsx|ts|tsx)\""
   },
   "lint-staged": {
-    "./src/**/*.{js,jsx,ts,tsx}": [
+    "*.{js,jsx,ts,tsx}": [
       "eslint --cache",
       "prettier -w --cache"
     ]
