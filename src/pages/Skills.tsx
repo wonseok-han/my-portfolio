@@ -30,9 +30,9 @@ const Skills = () => {
         data-aos="fade-up"
         data-aos-duration="1500"
       >
-        <div className="mt-10 font-sans text-3xl font-extrabold text-gray-900 sm:text-4xl lg:text-5xl">
+        <h2 className="mt-10 text-3xl font-black text-gray-900 sm:text-4xl lg:text-5xl">
           Skills
-        </div>
+        </h2>
         <hr className="mt-2 h-1 bg-gray-700" />
         <div className="mt-4 space-y-4">
           {skillData && (
@@ -45,7 +45,7 @@ const Skills = () => {
                 >
                   <div className="h-full overflow-hidden rounded-lg bg-white shadow-lg transition-all hover:scale-105">
                     <div className="px-6 py-4 text-center">
-                      <div className="font-sans text-lg font-extrabold text-gray-900">
+                      <div className="text-lg font-extrabold text-gray-900">
                         {skillDataKeyName[key]}
                       </div>
                       <hr className="mb-4 mt-2" />

@@ -21,9 +21,9 @@ const Project = () => {
   return (
     <div className="h-full bg-gray-100">
       <div className="mx-auto max-w-full px-4 py-16 sm:px-6 lg:px-8">
-        <div className="font-sans text-3xl font-black text-gray-900 sm:text-4xl lg:text-5xl">
+        <h2 className="text-3xl font-black text-gray-900 sm:text-4xl lg:text-5xl">
           Projects
-        </div>
+        </h2>
         <hr className="mt-2 h-1 bg-gray-700" />
         <div
           className="mx-auto mt-4 grid grid-flow-row gap-4 sm:grid-cols-1 lg:grid-cols-2"

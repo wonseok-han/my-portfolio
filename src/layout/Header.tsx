@@ -27,7 +27,7 @@ export default function Header({ toggleDarkMode }: HeaderProps) {
     >
       <nav className="flex h-full items-center justify-between px-4">
         <Link className="text-lg font-black hover:text-blue-400" to="/">
-          <p className="cursor-pointer font-sans text-2xl sm:text-3xl lg:text-4xl">
+          <p className="cursor-pointer text-2xl sm:text-3xl lg:text-4xl">
             wonseok-han
           </p>
         </Link>
@@ -38,7 +38,7 @@ export default function Header({ toggleDarkMode }: HeaderProps) {
             smooth={true}
             to="aboutme"
           >
-            <p className="font-sans">AboutMe</p>
+            <p>AboutMe</p>
           </Link>
           <Link
             className="cursor-pointer text-lg font-extrabold hover:text-blue-400 hover:underline"
@@ -46,7 +46,7 @@ export default function Header({ toggleDarkMode }: HeaderProps) {
             smooth={true}
             to="skills"
           >
-            <p className="font-sans">Skills</p>
+            <p>Skills</p>
           </Link>
           <Link
             className="cursor-pointer text-lg font-extrabold hover:text-blue-400 hover:underline"
@@ -54,7 +54,7 @@ export default function Header({ toggleDarkMode }: HeaderProps) {
             smooth={true}
             to="career"
           >
-            <p className="font-sans">Career</p>
+            <p>Career</p>
           </Link>
           <Link
             className="cursor-pointer text-lg font-extrabold hover:text-blue-400 hover:underline"
@@ -62,7 +62,7 @@ export default function Header({ toggleDarkMode }: HeaderProps) {
             smooth={true}
             to="projects"
           >
-            <p className="font-sans">Projects</p>
+            <p>Projects</p>
           </Link>
           <button
             className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-gray-400 focus:border-blue-500 focus:outline-none"
@@ -114,7 +114,7 @@ export default function Header({ toggleDarkMode }: HeaderProps) {
               to="aboutme"
               onClick={handleMenuButtonClick}
             >
-              <p className="font-sans">AboutMe</p>
+              <p>AboutMe</p>
             </Link>
             <Link
               className="my-4 text-lg font-extrabold hover:text-blue-400 hover:underline"
@@ -123,7 +123,7 @@ export default function Header({ toggleDarkMode }: HeaderProps) {
               to="skills"
               onClick={handleMenuButtonClick}
             >
-              <p className="font-sans">Skills</p>
+              <p>Skills</p>
             </Link>
             <Link
               className="my-4 text-lg font-extrabold hover:text-blue-400 hover:underline"
@@ -132,7 +132,7 @@ export default function Header({ toggleDarkMode }: HeaderProps) {
               to="career"
               onClick={handleMenuButtonClick}
             >
-              <p className="font-sans">Career</p>
+              <p>Career</p>
             </Link>
             <Link
               className="my-4 text-lg font-extrabold hover:text-blue-400 hover:underline"
@@ -141,7 +141,7 @@ export default function Header({ toggleDarkMode }: HeaderProps) {
               to="projects"
               onClick={handleMenuButtonClick}
             >
-              <p className="font-sans">Projects</p>
+              <p>Projects</p>
             </Link>
             <button
               className="my-4 flex h-8 w-8 items-center justify-center rounded-full border-2 border-gray-400 focus:border-blue-500 focus:outline-none"

@@ -73,7 +73,7 @@ const Careers = ({
                       strokeLinejoin="round"
                     />
                   </svg>
-                  <label className="w-20">담당업무</label>
+                  <label className="w-20 font-extrabold">담당업무</label>
                 </div>
               </h2>
               <div
@@ -112,7 +112,7 @@ const Careers = ({
                       strokeLinejoin="round"
                     />
                   </svg>
-                  <label className="w-20">프로젝트</label>
+                  <label className="w-20 font-extrabold">프로젝트</label>
                 </div>
               </h2>
               <div className="mt-2 grid grid-cols-1 gap-6 space-y-2 sm:mt-0 lg:flex lg:flex-col">
@@ -127,7 +127,9 @@ const Careers = ({
                         <h2 className="text-lg font-bold text-gray-900">
                           {project.name}
                         </h2>
-                        <p className="text-gray-600">{project.term}</p>
+                        <p className="font-semibold text-gray-600">
+                          {project.term}
+                        </p>
                       </div>
                       <div className="my-4 flex w-full flex-col items-start gap-1 text-base text-gray-600">
                         {project.intro.map((intro: string) => (
@@ -138,7 +140,7 @@ const Careers = ({
                       </div>
                       {project?.man && project.man.length > 0 && (
                         <div className="ml-3 mt-4 flex flex-col items-start gap-1 text-sm text-gray-600">
-                          <label className="flex-none text-lg font-semibold">
+                          <label className="flex-none text-lg font-bold">
                             구성 인원
                           </label>
                           <div className="ml-2 grid grid-cols-1 space-y-1">
@@ -154,7 +156,7 @@ const Careers = ({
                         </div>
                       )}
                       <div className="ml-3 mt-4 flex flex-col items-start gap-1 text-sm text-gray-600">
-                        <label className="flex-none text-lg font-semibold">
+                        <label className="flex-none text-lg font-bold">
                           업무/개발
                         </label>
                         <div className="ml-2 grid grid-cols-1 space-y-1">
@@ -171,7 +173,7 @@ const Careers = ({
                         </div>
                       </div>
                       <div className="ml-3 mt-4 flex flex-col items-start gap-1 text-sm text-gray-600">
-                        <label className="flex-none text-lg font-semibold">
+                        <label className="flex-none text-lg font-bold">
                           성과/결과
                         </label>
                         <div className="ml-2 grid grid-cols-1 space-y-1">
@@ -188,7 +190,7 @@ const Careers = ({
                         </div>
                       </div>
                       <div className="ml-3 mt-4 flex items-start gap-1 text-sm text-gray-600 sm:items-center">
-                        <label className="flex-none text-lg font-semibold">
+                        <label className="flex-none text-lg font-bold">
                           기술
                         </label>
                         <div className="ml-2 grid grid-cols-1 space-y-1 sm:flex sm:flex-row sm:space-x-1 sm:space-y-0">
@@ -267,9 +269,9 @@ const Career = () => {
   return (
     <div className="h-full bg-gray-100">
       <div className="mx-auto max-w-full px-4 py-16 sm:px-6 lg:px-8">
-        <div className="font-sans text-3xl font-black text-gray-900 sm:text-4xl lg:text-5xl">
+        <h2 className="text-3xl font-black text-gray-900 sm:text-4xl lg:text-5xl">
           Career
-        </div>
+        </h2>
         <hr className="mt-2 h-1 bg-gray-700" />
 
         <Careers data={data} onImageClick={handleImageClick} />
