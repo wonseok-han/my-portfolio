@@ -6,7 +6,7 @@ export const careerData: Array<CompanyProps> = [
     name: '(주)도울정보기술',
     term: '2018. 07 ~ 2023. 04',
     works: [
-      '기술개발팀 대리',
+      '기술연구팀 대리',
       '프레임워크 공통 표준/컴포넌트 개발',
       '프로젝트 업무 화면/API 개발',
       '웹서비스 유지보수',
