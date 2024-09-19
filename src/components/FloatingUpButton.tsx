@@ -9,7 +9,7 @@ const FloatingUpButton = () => {
       onClick={handleClick}
     >
       <svg
-        className="h-10 w-10"
+        className={`h-6 w-6 md:h-10 md:w-10`}
         fill="none"
         stroke="currentColor"
         strokeWidth={4}
