@@ -148,6 +148,7 @@ export const careerData: Array<CompanyProps> = [
           'React로 고객으로부터 요구된 샘플 화면 프론트엔드 개발',
           'Django 프레임워크 환경에서 고객으로부터 요구된 샘플 화면 백엔드 개발',
           'AWS EC2 인스턴스에 설치형 GitLab을 설치하고 Gitlab-CI를 사용할 수 있는 환경 구성',
+          'Gitlab-CI를 이용한 배포 자동화 구축',
           'Docker Portainer를 설정하고 오케스트레이션할 수 있는 환경 구성',
         ],
         man: ['개발 컨설턴트 1명', '개발자 1명'],
