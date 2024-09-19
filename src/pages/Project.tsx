@@ -19,9 +19,9 @@ const Project = () => {
   }, []);
 
   return (
-    <div className="h-full bg-gray-100">
+    <div className="h-full bg-gray-100 dark:bg-gray-900">
       <div className="mx-auto max-w-full px-4 py-16 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-black text-gray-900 sm:text-4xl lg:text-5xl">
+        <h2 className="text-3xl font-black sm:text-4xl lg:text-5xl">
           Projects
         </h2>
         <hr className="mt-2 h-1 bg-gray-700" />
@@ -37,7 +37,7 @@ const Project = () => {
               data-aos-duration="1000"
             >
               <div
-                className={`rounded-md bg-gray-800 opacity-70 shadow-2xl transition-all hover:scale-105 hover:opacity-100`}
+                className={`rounded-md bg-gray-800 opacity-70 shadow-2xl transition-all hover:scale-105 hover:opacity-100 dark:shadow-sm dark:shadow-white`}
               >
                 <div className="relative">
                   <LazyImage
@@ -51,13 +51,13 @@ const Project = () => {
                   <h2 className={`text-xl font-bold text-white`}>
                     {item.name}
                   </h2>
-                  <div className="mt-2 text-gray-300">
+                  <div className="mt-2 text-gray-300 dark:text-gray-200">
                     {item?.intro &&
                       item.intro.map((intro: string) => (
                         <p key={intro}>{intro}</p>
                       ))}
                   </div>
-                  <p className="mt-2 text-sm text-gray-300">
+                  <p className="mt-2 text-sm text-gray-300 dark:text-gray-200">
                     사용기술: {item.skills}
                   </p>
                   <div className="flex flex-row justify-center gap-5">

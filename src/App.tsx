@@ -1,5 +1,5 @@
 import AOS from 'aos';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 import {
   QueryClient,
@@ -10,7 +10,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import FloatingUpButton from 'components/FloatingUpButton';
 import ScrollToTop from 'components/ScrollToTop';
-import { ThemeContext } from 'contexts/ThemeContext';
+import ThemeProvider from 'contexts/ThemeContext';
 import Content from 'layout/Content';
 import Footer from 'layout/Footer';
 import Header from 'layout/Header';
@@ -31,12 +31,6 @@ const queryClient = new QueryClient({
 });
 
 const App: React.FC = () => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
-
   useEffect(() => {
     AOS.init();
   }, []);
@@ -44,13 +38,11 @@ const App: React.FC = () => {
   return (
     <Router>
       <QueryClientProvider client={queryClient}>
-        <ThemeContext.Provider value={{ isDarkMode, toggleDarkMode }}>
+        <ThemeProvider>
           <div
-            className={`flex min-h-full flex-col ${
-              isDarkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'
-            }`}
+            className={`flex min-h-full flex-col bg-white text-gray-900 dark:bg-gray-900 dark:text-white`}
           >
-            <Header toggleDarkMode={toggleDarkMode} />
+            <Header />
             <Content>
               <QueryErrorResetBoundary>
                 {({ reset }) => (
@@ -69,7 +61,7 @@ const App: React.FC = () => {
             </Content>
             <Footer />
           </div>
-        </ThemeContext.Provider>
+        </ThemeProvider>
       </QueryClientProvider>
     </Router>
   );

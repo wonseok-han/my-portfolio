@@ -2,18 +2,11 @@ import { useState } from 'react';
 import { FiMoon, FiSun, FiMenu } from 'react-icons/fi';
 import { Link } from 'react-scroll';
 
+import './Header.css';
 import { useTheme } from 'contexts/ThemeContext';
 
-import './Header.css';
-
-interface HeaderProps {
-  toggleDarkMode: () => void;
-}
-
-export default function Header({ toggleDarkMode }: HeaderProps) {
-  const { isDarkMode } = useTheme();
-  const bgColor = isDarkMode ? 'bg-gray-800' : 'bg-white';
-  const textColor = isDarkMode ? 'text-white' : 'text-gray-800';
+export default function Header() {
+  const { isDarkMode, toggleDarkMode } = useTheme();
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -23,7 +16,7 @@ export default function Header({ toggleDarkMode }: HeaderProps) {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 h-16 shadow-md ${bgColor} ${textColor} z-50`}
+      className={`fixed inset-x-0 top-0 z-50 h-16 bg-white text-gray-800 shadow-md dark:bg-gray-800 dark:text-white`}
     >
       <nav className="flex h-full items-center justify-between px-4">
         <Link className="text-lg font-black hover:text-blue-400" to="/">
@@ -95,14 +88,12 @@ export default function Header({ toggleDarkMode }: HeaderProps) {
                 />
               </svg>
             ) : (
-              <FiMenu
-                className={`h-7 w-7 transition duration-200 ${textColor}`}
-              />
+              <FiMenu className={`h-7 w-7 transition duration-200`} />
             )}
           </button>
         </div>
         <div
-          className={`absolute inset-x-0 top-16 rounded-t-lg shadow-lg md:hidden ${bgColor} ${
+          className={`absolute inset-x-0 top-16 rounded-t-lg shadow-lg md:hidden ${
             !isOpen ? 'hidden' : ''
           } ${isOpen ? 'slide-down' : 'slide-up'}`}
         >
