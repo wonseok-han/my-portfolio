@@ -21,7 +21,7 @@ export default function Header() {
       <nav className="flex h-full items-center justify-between px-4">
         <Link className="text-lg font-black hover:text-blue-400" to="/">
           <p className="cursor-pointer text-2xl sm:text-3xl lg:text-4xl">
-            wonseok-han 확인
+            wonseok-han 확인222
           </p>
         </Link>
         <div className="hidden items-center space-x-4 md:flex">
